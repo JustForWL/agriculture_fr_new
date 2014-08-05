@@ -24,10 +24,19 @@ else :
 			$content = $content . get_option('display_copyright_text');    
 			$post_data = get_post($post->ID, ARRAY_A);    
 			$slug = $post_data['post_name'];  
+			if($slug != "shownews"){
+				 get_template_part( 'content/content', $slug);
+			}else{
+				if(!is_user_logged_in()){
+					wp_safe_redirect("http://wordpress.local/wp-login.php");
+				}else{
+					 get_template_part( 'content/content', $slug);
+				}
+			}
 			}
           
 			?>
-				<?php get_template_part( 'content/content', $slug)  ?>
+				
             
 			<?php cryout_after_content_hook(); ?>
 			</div><!-- #content -->

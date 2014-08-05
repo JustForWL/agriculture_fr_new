@@ -521,5 +521,96 @@ function cryout_hexadder($hex,$inc) {
    else: return "";  // input string is not a valid hex color code
    endif;
 } // cryout_cryout_hex2rgb()
+/**
+ * WordPress 注册表单添加额外的字段
+ * http://www.wpdaxue.com/require-additional-profile-fields-at-registration.html
+ */
+// 在注册界面添加额外的表单
+add_action( 'register_form', 'additional_profile_fields' );
+function additional_profile_fields() { ?>
+    <p>
+        <label><?php _e('名字') ?><?php get_usermeta(1, "telephone"); ?><br />
+        <input type="text" name="first_name" id="first_name" class="input" size="25" tabindex="20" /></label>
+    </p>
+    <p>
+        <label><?php _e('姓氏') ?><br />
+        <input type="text" name="last_name" id="last_name" class="input" size="25" tabindex="20" /></label>
+    </p>
+<?php }
+// 检测表单字段是否为空，如果为空显示提示信息
+add_action( 'register_post', 'add_register_field_validate_first_name', 10, 3 );
+function add_register_field_validate_first_name( $sanitized_user_login, $user_email, $errors) {
+    if (!isset($_POST[ 'first_name' ]) || empty($_POST[ 'first_name' ])) {
+        return $errors->add( 'firstnameempty', '<strong>ERROR</strong>: 请输入您的名字.' );
+    }
+}
+add_action( 'register_post', 'add_register_field_validate_last_name', 10, 3 );
+function add_register_field_validate_last_name( $sanitized_user_login, $user_email, $errors) {
+    if (!isset($_POST[ 'last_name' ]) || empty($_POST[ 'last_name' ])) {
+        return $errors->add( 'lastnameempty', '<strong>ERROR</strong>: 请输入您的姓氏.' );
+    }
+}
+// 将用户填写的字段内容保存到数据库中
+add_action( 'user_register', 'insert_register_fields' );
+function insert_register_fields( $user_id ) {
+ 
+    $first_name = apply_filters('pre_user_first_name', $_POST['first_name']);
+    $last_name = apply_filters('pre_user_last_name', $_POST['last_name']);
+ 
+    // 以下的 'first_name' 和 'last_name' 是"我的个人资料"中已有的字段
+    update_user_meta( $user_id, 'first_name', $first_name );
+    update_user_meta( $user_id, 'last_name', $last_name );
+}
+/**
+ * WordPress 个人资料添加额外的字段
+ * http://www.wpdaxue.com/extra-user-profile-fields.html
+ */
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+ 
+function extra_user_profile_fields( $user ) { ?>
+<h3><?php _e("额外信息", "blank"); ?></h3>
+ 
+<table class="form-table">
+	<tr>
+		<th><label for="facebook"><?php _e("Facebook URL"); ?></label></th>
+		<td>
+			<input type="text" name="facebook" id="facebook" value="<?php echo esc_attr( get_the_author_meta( 'facebook', $user->ID ) ); ?>" class="regular-text" /><br />
+			<span class="description"><?php _e("请输入您的 Facebook 地址"); ?></span>
+		</td>
+	</tr>
+	<tr>
+		<th><label for="twitter"><?php _e("Twitter"); ?></label></th>
+		<td>
+			<input type="text" name="twitter" id="twitter" value="<?php echo esc_attr( get_the_author_meta( 'twitter', $user->ID ) ); ?>" class="regular-text" /><br />
+			<span class="description"><?php _e("请输入您的 Twitter 用户名"); ?></span>
+		</td>
+	</tr>
+</table>
+<?php }
+ 
+add_action( 'personal_options_update', 'save_extra_user_profile_fields' );
+add_action( 'edit_user_profile_update', 'save_extra_user_profile_fields' );
+ 
+function save_extra_user_profile_fields( $user_id ) {
+ 
+	if ( !current_user_can( 'edit_user', $user_id ) ) { return false; }
+ 
+	update_usermeta( $user_id, 'facebook', $_POST['facebook'] );
+	update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
+}
+/**
+ * 名称：WordPress替换登陆后的默认首页
+ * 作者：露兜
+ * 博客：http://www.ludou.org/
+ * 最后修改：2012年04月06日
+ */
 
+function my_login_redirect($redirect_to, $request){
+  if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
+    return home_url("/");
+  else
+    return $redirect_to;
+}
+add_filter("login_redirect", "my_login_redirect", 10, 3);
 ?>

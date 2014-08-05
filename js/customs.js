@@ -1,4 +1,29 @@
-﻿$(document).ready(function(){
+﻿var canSubmit = true;
+$(function(){
+	$("input[name='hangye']").each(function(){
+		if($(this).val() == '7'){
+			$(this).bind('click',function(){
+				document.getElementById("other1").removeAttribute("readonly");
+			});
+		}else{
+			$(this).bind('click',function(){
+				document.getElementById("other1").setAttribute("readonly", "readonly");
+			});
+		}
+	});
+	$("input[name='job']").each(function(){
+		if($(this).val() == '11'){
+			$(this).bind('click',function(){
+				document.getElementById("other2").removeAttribute("readonly");
+			});
+		}else{
+			$(this).bind('click',function(){
+				document.getElementById("other2").setAttribute("readonly", "readonly");
+			});
+		}
+	});
+});
+$(document).ready(function(){
 	$("input[name='user']").focus(function(){
 		document.getElementById("tishi1").innerHTML='';
 	}
@@ -14,8 +39,11 @@
 				
 				if(data == "registed"){
 					document.getElementById('tishi1').innerHTML="<font color='#f00'>&nbsp;用户名已被占用</font>";
+					canSubmit = false;
 				}else{
-					document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
+					alert(data);
+					/*document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
+					canSummit = true;*/
 				}
 			}
 			});
@@ -356,6 +384,7 @@ function changeByName(name){
 
 	}
 }
+/*
 function getFromOther(other){
 	if('other1' == other){
 		document.getElementById("other1").removeAttribute("readonly");
@@ -363,7 +392,7 @@ function getFromOther(other){
 	if('other2' == other){
 		document.getElementById("other2").removeAttribute("readonly");
 	}
-}
+}*/
 function sendContent(other){
 	if('other1' == other){
 		document.getElementsByName("hangye2").item(0).value = document.getElementById("other1").value;
@@ -494,7 +523,7 @@ function checkReg(){
 		var phone =/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
 		if(!phone.test(document.form1.phone.value)){
 		  document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的电话号码</font>";
-		   document.form1.phone.focus();
+		 //  document.form1.phone.focus();
 		   return false;
 		}
 	}
@@ -504,10 +533,10 @@ function checkReg(){
 		return false;
 	
 	}else{
-		var cellphone=/^(((1[0-9]{1}[0-9]{1}))+d{8})$/;
+		var cellphone= /(^1[3|5|8][0-9]{9}$)/;
 		if(!cellphone.test(document.form1.mobilephone.value)){
 		  document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
-		  document.form1.mobilephone.focus();
+		 // document.form1.mobilephone.focus();
 		   return false;
 		}
 	}
@@ -531,10 +560,13 @@ function checkReg(){
 	}else{
 		var  code =/^[0-9]{6}$/;  
 		if(!code.test(document.form1.code.value)){
-		  document.getElementById('tishi14').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
-		  document.form1.mobilephone.focus();
+		  document.getElementById('tishi13').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
+		  //document.form1.mobilephone.focus();
 		   return false;
 		}
+	}
+	if(canSubmit){
+		document.getElementById("reg").submit();
 	}
 }
 function checkRegAndPost(){

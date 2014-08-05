@@ -22,7 +22,7 @@
 <form name="form1" action="" method="post" class="jqtransformdone">
 	<img src="images/picture67.png" style="display:inline;margin-top:50px;margin-left:40px; height:80px;" align="left">
    
-    <div style="display:inline; margin-left:120px;margin-top:-20px;" align="left">
+    <div style="display:inline; margin-left:100px;margin-top:-20px;" align="left">
         <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;margin-top:50px;"><span style="height:40px;">&nbsp;&nbsp;<font color="#FFFFFF">产品类型：</font></span>
         <input type="text" value="请选择" id="productsType" class="am"  style="color:#FFF;border-radius:0px;-webkit-border-radius:0px; background-color:#D10024;margin-top:2px;border:0px;"/>
         <div id="HMF-1" style="display: none " class="bm">
@@ -34,7 +34,7 @@
          <span id="a6" onclick="pick('法国的葡萄酒、啤酒和烈酒', 'productsType', 'HMF-1')" onMouseOver="bgcolor('a6')" onMouseOut="nocolor('a6')" class="cur">&nbsp;法国的葡萄酒、啤酒和烈酒</span>
         </div>
         <img src="images/picture72.png" style="margin-right:2px;" onclick="hide('HMF-1')" />
-        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
         <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;"><label for="country" title="国家" >&nbsp;&nbsp;<font color="#FFFFFF">国家：</font></label>
         <!--<select name="select2" style="color:#fff;border-radius:0px;-webkit-border-radius:0px;background-color:rgba(209,0,36, 0);border-color:#D10024;outline: medium none;"><option value="大不列颠及北爱尔兰联合王国" style=" background-color:#D10024">大不列颠及北爱尔兰联合王国</option></select>-->
          <input type="text" value="请选择" id="country" class="am" size="300" style="color:#FFF;border-radius:0px;-webkit-border-radius:0px; background-color:#D10024;margin-top:2px;border:0px;"/>

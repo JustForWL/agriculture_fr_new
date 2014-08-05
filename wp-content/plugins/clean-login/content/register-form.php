@@ -10,7 +10,7 @@
 			<div class="cleanlogin-field">
 				<input class="cleanlogin-field-email" type="email" name="email" value="" placeholder="<?php echo __( 'E-mail', 'cleanlogin' ); ?>">
 			</div>
-
+            <?php the_author_meta('telephone'); ?>
 			<div class="cleanlogin-field-website">
 				<label for='website'>Website</label>
 				<input type='text' name='website' value=" ">

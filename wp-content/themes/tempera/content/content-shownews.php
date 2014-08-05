@@ -12,10 +12,10 @@
 <div style="padding-left: 10%; padding-top: 5%;">
 <div class="b1"><img style="display: inline;" src="images/picture60.png" alt="" />
 <div class="headersearch headersearch2" ><form id="searchform" action="" method="get"><input id="s" name="s" type="text" value="搜索新闻"  onfocus="this.value='';"> <input id="searchsubmit" type="submit" value="" /></form></div>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img id="news" src="images/picture61_1.png" alt="" height="20" width="30" onclick="askContent('news')"/>&nbsp;&nbsp;&nbsp;&nbsp;
 
-<img id="talk" src="images/picture62_2.png" alt="" height="20" width="30" onclick="askContent('talk')"/>&nbsp;&nbsp;&nbsp;&nbsp;
+<img id="news" src="images/picture61_1.png" alt="" height="20" width="30" onclick="askContent('news')"/>&nbsp;&nbsp;
+
+<img id="talk" src="images/picture62_2.png" alt="" height="20" width="30" onclick="askContent('talk')"/>&nbsp;&nbsp;
 
 <img id="shijian" src="images/picture63_2.png" alt="" height="20" width="30" onclick="askContent('shijian')"/>
 
