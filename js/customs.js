@@ -365,23 +365,45 @@ function changeByName(name){
 	var col1 = document.getElementById("col1");
 	var col2 = document.getElementById('col2');
 	var col3 = document.getElementById('col3');
+	
 	if("col1" == name){
+		document.getElementById('order').value = "name";
+		alert(document.getElementById('productsType').value);
+		alert(document.getElementById('country').value);
+		alert(document.getElementById('company').value);
+		
+		document.getElementById('productsType').value = document.getElementById('productsType').value;
+		document.getElementById('country').value = document.getElementById('country').value;
+		document.getElementById('company').value = document.getElementById('company').value;
 		col1.setAttribute("src", "images/picture69_2.png");
 		col2.setAttribute("src", "images/picture70_1.png");
 		col3.setAttribute("src", "images/picture71_1.png");
+		alert("------");
+		alert(document.getElementById('productsType').value);
+		alert(document.getElementById('country').value);
+		alert(document.getElementById('company').value);
+		document.getElementById('form1').submit();
 
 	}
-	if("col2" == name){
+	if("col2" == name){			
+		document.getElementById('order').value = "company";
+		document.getElementById('productsType').value = document.getElementById('productsType').value;
+		document.getElementById('country').value = document.getElementById('country').value;
+		document.getElementById('company').value = document.getElementById('company').value;
 		col1.setAttribute("src", "images/picture69_1.png");
 		col2.setAttribute("src", "images/picture70_2.png");
 		col3.setAttribute("src", "images/picture71_1.png");
-
+		document.getElementById('form1').submit();
 	}
 	if("col3" == name){
+		document.getElementById('productsType').value = document.getElementById('productsType').value;
+		document.getElementById('country').value = document.getElementById('country').value;
+		document.getElementById('company').value = document.getElementById('company').value;
+		document.getElementById('order').value = "country";
 		col1.setAttribute("src", "images/picture69_1.png");
 		col2.setAttribute("src", "images/picture70_1.png");
 		col3.setAttribute("src", "images/picture71_2.png");
-
+		document.getElementById('form1').submit();
 	}
 }
 /*
@@ -575,3 +597,5 @@ function checkRegAndPost(){
 		document.getElementById('done').setAttribute("src", "images/picture55.png");
 	}
 }
+
+function checkcontent(content){}
