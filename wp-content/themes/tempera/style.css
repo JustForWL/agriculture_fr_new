@@ -238,12 +238,13 @@ height:100%;
 .footerfour .widget-area {
 	float: left;
 	margin-right:2%;
-	width: 23.5%;
+	/*width: 20%;*/
+	padding-left:80px;
 }
 .footerthree .widget-area {
 	float: left;
 	margin-right:2%;
-	width: 32%;
+	width: 20%;
 }
 
 .footertwo .widget-area {
@@ -1805,7 +1806,9 @@ border-radius:100px;
 	border-radius:5px;
 	border-bottom:1px solid transparent;
 }
-
+#footer-widget-area a {
+	color:#FFF;
+}
 #footer-widget-area a:hover {
 	text-decoration:underline;
 }

@@ -233,9 +233,9 @@ else { ?>
 .entry-title a:hover { color: <?php echo $tempera_contentcolortxttitlehover; ?>; }
 #content h3.entry-format { color: <?php echo $tempera_menucolortxtdefault; ?>; background-color: <?php echo $tempera_menucolorbgdefault; ?>; }
 
-#footer { color: <?php echo $tempera_footercolortxt; ?>; background-color: <?php echo $tempera_backcolorfooterw; ?>; }
+#footer { color: #FFF; background-color: <?php echo $tempera_backcolorfooterw; ?>; }
 #footer2 { color: <?php echo $tempera_footercolortxt; ?>; background-color: <?php echo $tempera_backcolorfooter; ?>;  }
-#footer a { color: <?php echo $tempera_linkcolorwooter; ?>; }
+#footer a { color: #CCC; }
 #footer a:hover { color: <?php echo $tempera_linkcolorwooterhover; ?>; }
 #footer2 a, .footermenu ul li:after  { color: <?php echo $tempera_linkcolorfooter; ?>; }
 #footer2 a:hover { color: <?php echo $tempera_linkcolorfooterhover; ?>; }

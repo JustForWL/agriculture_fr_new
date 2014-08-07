@@ -599,18 +599,21 @@ function save_extra_user_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'facebook', $_POST['facebook'] );
 	update_usermeta( $user_id, 'twitter', $_POST['twitter'] );
 }
+
 /**
  * 名称：WordPress替换登陆后的默认首页
  * 作者：露兜
  * 博客：http://www.ludou.org/
  * 最后修改：2012年04月06日
-
+ */
 function my_login_redirect($redirect_to, $request){
-  if( empty( $redirect_to ) || $redirect_to == 'wp-admin/' || $redirect_to == admin_url() )
+  if( empty( $redirect_to )  || $redirect_to == admin_url() )
     return home_url("/");
   else
     return $redirect_to;
 }
-add_filter("login_redirect", "my_login_redirect", 10, 3); */
+add_filter("login_redirect", "my_login_redirect", 10, 3);
+
+
 
 ?>

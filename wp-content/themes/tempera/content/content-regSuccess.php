@@ -72,14 +72,43 @@ if(!empty($_POST['canSubmit'])){
 		}
 		$sql = "insert into userinfo values ("."'".$username."','".$email."','".md5($pass)."','".$club."','".$hangye."','".$companyChineseName."','".$companyEnglishName."','".$scale."','".$companyHomepage."','".$chineseName."','".$firstName."','".$secondName."','".$job."','".$phone."','".$tax."','".$mobilephone."','".$addressChinese."','".$addressEnglish."','".$code."','".$interetingToString."');";
 	    $user_id = wp_create_user( $sanitized_user_login, $_POST['pass'], $user_email);
-		mysql_query($sql, $db_connect);
-		echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=http://wordpress.local'>";
-	}else{
+		mysql_query($sql, $db_connect); ?>
+		<div id="focus">
+			<ul>
+				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
+				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
+				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
+				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
+				
+			</ul>
+		 </div>
+         <div id="main" >
+         <div id="frontpage" >
+         <div id="pp-afterslider">
+         <div class="b2">
+            <div style="height:200px;"></div>
+            <div style="margin-left:10%;"><img src="images/picture136.png" /></div>
+           
+            <div style="margin-top:-30%;float:left;margin-left:48%;"></span><img src="images/picture135.png" /></div>
+            <div style="margin-top:-20%;float:left;margin-left:48%;"><img src="images/picture134.png" /></div>
+            <div style="margin-top:-10%;float:left;;margin-left:48%;">
+	        <ul style="list-style:none;height:85px;">
+                    
+                    <li style="display:inline;"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="images/picture133.png"/></a></li>&nbsp;
+                    <li style="display:inline;margin:1px;"><a href="http://wordpress.local" target=""><img src="images/picture132.png" /></a></li>
+                    
+                </ul>
+          
+            </div>
+	</div>
+         <div style="height:200px;"></div>
+         </div> <!-- #pp-afterslider -->
+         </div> <!-- #frontpage -->
+	<?php }else{
 		echo "<script type='text/javascript'>alert('你已注册！')</script>";
-		echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=http://wordpress.local'>";
+		header("Location:http://wordpress.local");
 	}
 }else{
 	header("Location:http://wordpress.local");
-	//echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=http://wordpress.local'>";
 }
 ?>

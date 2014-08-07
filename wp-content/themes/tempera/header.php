@@ -35,7 +35,7 @@
 <div class="menuskin" id="popmenu" onmouseover="clearhidemenu();highlightmenu(enent, 'on')" onmouseout="highlightmenu(event, 'off');dynamichide(event)">
 </div>
 <div style="display:inline; margin-left:30%;"><?php if(!is_user_logged_in()) { ?><a href="http://wordpress.local/register" style="color:#7F7F7F;">免费注册</a><font color="#7F7F7F">/</font><a style="color:#7F7F7F;" href="http://wordpress.local/wp-login.php">登录</a><?php }else{ global $current_user; echo "欢迎您：".$current_user->user_login ;} ?></div>
-<div class="headersearch" ><?php get_search_form(); ?></div><?php cryout_topbar_hook(); ?> 
+<div class="headersearch" ><?php get_search_form(); ?></div><?php cryout_topbar_hook(); ?> <span style="margin-left:88%;float:left;margin-top:-30px;color:#CCC;"><?php if(function_exists('the_views')){the_views('次浏览',true);}?></span>
 </div>
 <?php cryout_wrapper_hook(); ?>
 

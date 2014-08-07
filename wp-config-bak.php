@@ -99,5 +99,4 @@ require_once(ABSPATH . 'wp-settings.php');
 $home = 'http://'.$_SERVER['HTTP_HOST']; //博客首页
 $wpurl = 'http://'.$_SERVER['HTTP_HOST']; //WP程序的路径
 define('WP_HOME', $home);
-define('WP_SITEURL', $wpurl);
-*/
+define('WP_SITEURL', $wpurl);*/

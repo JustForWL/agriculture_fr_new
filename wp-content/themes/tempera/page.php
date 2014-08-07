@@ -30,7 +30,7 @@ else :
 				if(!is_user_logged_in()){
 					wp_safe_redirect("http://wordpress.local/wp-login.php");
 				}else{
-					 get_template_part( 'content/content', $slug);
+					wp_safe_redirect("http://wordpress.local/showNews.html");
 				}
 			}
 			}
