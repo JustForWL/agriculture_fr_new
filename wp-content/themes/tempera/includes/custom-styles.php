@@ -34,6 +34,39 @@ $colPadding = 30;
 $contentSize = $contentSize - 60;
 
 ?>
+.selectedone {background:url('images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
+.unselectedone {background:url('images/picture137.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
+.cur{cursor:pointer; display:block;color:#788F72;width:250px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
+.am{border-color:#D10024;border: 0px;color:#fff;cursor: pointer; width: 150px;height: 19px;margin:10px 0px 0px 10px; padding:3px 0px 0px 2px;}
+.bm{background-color:#FFF;width:250px; margin-left:75px;position:absolute; z-index:100;margin-top:2px;}
+.bm2{background-color:#FFF;width: 250px; margin-left:55px;position:absolute; z-index:100;margin-top:2px;}
+ul li{ float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden}
+#row_1:hover{ color:#F00}
+#row_2:hover{ color:#F00}
+#row_3:hover{ color:#F00}
+#row_4:hover{ color:#F00}
+#row_5:hover{ color:#F00}
+#row_6:hover{ color:#F00}
+#row_7:hover{ color:#F00}
+#row_8:hover{ color:#F00}
+#row_9:hover{ color:#F00}
+#row_10:hover{ color:#F00}
+#row_11:hover{ color:#F00}
+#row_12:hover{ color:#F00}
+#row_13:hover{ color:#F00}
+#row_14:hover{ color:#F00}
+#row_15:hover{ color:#F00}
+
+.li_col1{width:20%; height:28px}
+.li_col2{width:25%; height:28px}
+.li_col3{width:55%; height:28px}
+.page_img{
+background:url(images/page_img0.png) top center no-repeat; width:40px; display:inline-block; text-align:center; cursor:pointer;}
+.page_img_sel{
+	background:url(images/page_img0.png) top center no-repeat; background-color:#F00; width:40px; display:inline-block; text-align:center;
+	}
+#wrapper { max-height:2050px;}
+.row_type :hover {color:#F00;}
 #done :hover {cursor:pointer;}
 .lianxi1 {}
 .buchong1 {float:left;margin-left:580px; margin-top:-1600px;}

@@ -1,15 +1,3 @@
-<style type="text/css">
-.cur{cursor:pointer; display:block;color:#788F72;width:250px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
-.am{border-color:#D10024;border: 0px;color:#fff;cursor: pointer; width: 150px;height: 19px;margin:10px 0px 0px 10px; padding:3px 0px 0px 2px;}
-.bm{background-color:#FFF;width:250px; margin-left:75px;position:absolute; z-index:100;margin-top:2px;}
-.bm2{background-color:#FFF;width: 250px; margin-left:55px;position:absolute; z-index:100;margin-top:2px;}
-ul li{float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden}
-.li_col1{width:20%; height:28px}
-.li_col2{width:25%; height:28px}
-.li_col3{width:55%; height:28px}
-
-</style>
-
 <div id="focus">
 			<ul>
 				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
@@ -24,11 +12,11 @@ ul li{float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:
 <div id="pp-afterslider" class="b2">
 
 <div >
-<form name="form1" id="form1" action="frame.php" method="post" class="jqtransformdone">
+
 	<img src="images/picture67.png" style="display:inline;margin-top:50px;margin-left:40px; height:80px;" align="left">
    
     <div style="display:inline; margin-left:100px;margin-top:-20px;" align="left">
-        <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;margin-top:50px;"><span style="height:40px;">&nbsp;&nbsp;<font color="#FFFFFF">产品类型：</font></span>
+      <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;margin-top:50px;"><span style="height:40px;">&nbsp;&nbsp;<font color="#FFFFFF">产品类型：</font></span>
         <input type="text" name="productsType" value="请选择" id="productsType" class="am"  style="color:#FFF;border-radius:0px;-webkit-border-radius:0px; background-color:#D10024;margin-top:2px;border:0px;"/>
         <div id="HMF-1" style="display: none " class="bm">
          <span id="a1" onclick="pick('法国的葡萄酒、啤酒和烈酒', 'productsType', 'HMF-1')" onMouseOver="bgcolor('a1')" onMouseOut="nocolor('a1')" class="cur">&nbsp;法国的葡萄酒、啤酒和烈酒</span>
@@ -39,8 +27,8 @@ ul li{float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:
          <span id="a6" onclick="pick('法国的葡萄酒、啤酒和烈酒', 'productsType', 'HMF-1')" onMouseOver="bgcolor('a6')" onMouseOut="nocolor('a6')" class="cur">&nbsp;法国的葡萄酒、啤酒和烈酒</span>
         </div>
         <img src="images/picture72.png" style="margin-right:2px;" onclick="hide('HMF-1')" />
-        </div>
-        <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;"><label for="country" title="国家" >&nbsp;&nbsp;<font color="#FFFFFF">国家：</font></label>
+      </div>
+     <div style="background-color:#D10024; border:#D10024 solid 1px;display:inline-block;"><label for="country" title="国家" >&nbsp;&nbsp;<font color="#FFFFFF">国家：</font></label>
         <!--<select name="select2" style="color:#fff;border-radius:0px;-webkit-border-radius:0px;background-color:rgba(209,0,36, 0);border-color:#D10024;outline: medium none;"><option value="大不列颠及北爱尔兰联合王国" style=" background-color:#D10024">大不列颠及北爱尔兰联合王国</option></select>-->
          <input type="text" name="country" value="请选择" id="country" class="am" size="300" style="color:#FFF;border-radius:0px;-webkit-border-radius:0px; background-color:#D10024;margin-top:2px;border:0px;"/>
         <div id="HMF-2" style="display: none " class="bm2">
@@ -53,35 +41,36 @@ ul li{float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:
         </div>
         <img src="images/picture72.png" style="margin-right:2px;" onclick="hide('HMF-2')" />
         </div>
-        <div style="margin-left:50%;">
-        <div style="border:#999 solid 1px; width:60%;margin-top:10px;"><span>&nbsp;&nbsp;&nbsp;<font color="#999999">企业名称:&nbsp;</font></span>
-        <input type="text" name="company" size=30 onblur="checkcontent(this.value)" style="margin-top:4px;border-radius:0px;-webkit-border-radius:0px;background-color:#fff;border-color:#fff;" hidefocus/> </div>
-        <input type="image" src="images/picture68.png" align="left" style="display:inline;margin-left:350px; margin-top:-35px;">
-        <input type="hidden" name="order" id="order" value="name" />
+        <div style="margin-left:49%;">
+        <div style="border:#999 solid 1px; width:340px;;margin-top:10px;"><span>&nbsp;&nbsp;&nbsp;<font color="#999999">企业名称:&nbsp;</font></span>
+        <input type="text" name="company" id="company" size=30 onblur="checkcontent(this.value)" style="margin-top:4px;border-radius:0px;-webkit-border-radius:0px;background-color:#fff;border-color:#fff;" hidefocus/> </div>
+        <input type="image" name="search" src="images/picture68.png" align="left" style="display:inline;margin-left:350px; margin-top:-35px;">
         </div>
     </div>
-    
-    <div style="margin-left:50%;">
-        <input type="hidden" name="page" id="page" size=30 value="<?php echo $page;?>"  />
-        </div>
-</div>
-  </form>
 
-<div style="height:80px;" ></div>
-    <div class="col">
+</div>
+	<div style="height:80px;" >
+	</div>
     <div class="req_form" id="company">    
 
         <img onclick="changeByName('col1')" id="col1" src="images/picture69_2.png" />
         <img onclick="changeByName('col2')" id="col2" src="images/picture70_1.png"  />
         <img onclick="changeByName('col3')" id="col3" src="images/picture71_1.png"  />
-<iframe src="frame.php"> 
-</iframe>
+		<div id="show_ajax">
+    	</div>
 		
     
     </div>
 
+</div>
 
-    <div style="height:80px;" ></div>
+
+
+
+    <div style="height:80px;" >
+
+    </div>
+
 
 
 </div> <!-- #pp-afterslider -->

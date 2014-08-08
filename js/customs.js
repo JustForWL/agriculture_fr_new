@@ -28,6 +28,65 @@ $(document).ready(function(){
 		document.getElementById("tishi1").innerHTML='';
 	}
 	);
+	$("input[name = 'search']").click(function(){
+		$.ajax({
+			type:'POST',
+			url:'companyQuery.php',
+			data:{productsType:$("input[name='productsType']").val(), country:$("input[name='country']").val(), company:$("input[name='company']").val(), order:'name'},
+			dataType:'text',
+			success:function(data){
+				document.getElementById('show_ajax').innerHTML = data;
+			}
+			});
+		
+		});
+
+		//this is for the order by name
+	$("#col1").click(function(){
+		var pageID = $("#pageID").val();
+		document.getElementById('show_ajax').innerHTML = '';
+		$.ajax({
+			type:'POST',
+			url:'companyQuery.php',
+			data:{productsType:$("input[name='productsType']").val(), country:$("input[name='country']").val(), company:$("input[name='company']").val(), order:'name', page:pageID},
+			dataType:'text',
+			success:function(data){
+				document.getElementById('show_ajax').innerHTML = data;
+			}
+			});
+		
+		});
+		//this is for the order by products	
+	$("#col2").click(function(){
+		var pageID = $("#pageID").val();
+		document.getElementById('show_ajax').innerHTML = '';
+		$.ajax({
+			type:'POST',
+			url:'companyQuery.php',
+			data:{productsType:$("input[name='productsType']").val(), 'country':$("input[name='country']").val(), 'company':$("input[name='company']").val(), order:'products',page:pageID},
+			dataType:'text',
+			success:function(data){
+				document.getElementById('show_ajax').innerHTML = data;
+			}
+			});
+		
+		});
+				//this is for the order by exportation_countries
+	$("#col3").click(function(){
+		var pageID = $("#pageID").val();
+	    document.getElementById('show_ajax').innerHTML = '';
+		$.ajax({
+			type:'POST',
+			url:'companyQuery.php',
+			data:{productsType:$("input[name='productsType']").val(), 'country':$("input[name='country']").val(), 'company':$("input[name='company']").val(), order:'exportation_countries',page:pageID},
+			dataType:'text',
+			success:function(data){
+				document.getElementById('show_ajax').innerHTML = data;
+			}
+			});
+		
+		});
+	
 	$("input[name='user']").blur(function(){
 		if($("input[name='user']").val() != ''){
 		$.ajax({
@@ -367,43 +426,20 @@ function changeByName(name){
 	var col3 = document.getElementById('col3');
 	
 	if("col1" == name){
-		document.getElementById('order').value = "name";
-		alert(document.getElementById('productsType').value);
-		alert(document.getElementById('country').value);
-		alert(document.getElementById('company').value);
-		
-		document.getElementById('productsType').value = document.getElementById('productsType').value;
-		document.getElementById('country').value = document.getElementById('country').value;
-		document.getElementById('company').value = document.getElementById('company').value;
 		col1.setAttribute("src", "images/picture69_2.png");
 		col2.setAttribute("src", "images/picture70_1.png");
 		col3.setAttribute("src", "images/picture71_1.png");
-		alert("------");
-		alert(document.getElementById('productsType').value);
-		alert(document.getElementById('country').value);
-		alert(document.getElementById('company').value);
-		document.getElementById('form1').submit();
-
 	}
 	if("col2" == name){			
-		document.getElementById('order').value = "company";
-		document.getElementById('productsType').value = document.getElementById('productsType').value;
-		document.getElementById('country').value = document.getElementById('country').value;
-		document.getElementById('company').value = document.getElementById('company').value;
 		col1.setAttribute("src", "images/picture69_1.png");
 		col2.setAttribute("src", "images/picture70_2.png");
 		col3.setAttribute("src", "images/picture71_1.png");
-		document.getElementById('form1').submit();
+		
 	}
 	if("col3" == name){
-		document.getElementById('productsType').value = document.getElementById('productsType').value;
-		document.getElementById('country').value = document.getElementById('country').value;
-		document.getElementById('company').value = document.getElementById('company').value;
-		document.getElementById('order').value = "country";
 		col1.setAttribute("src", "images/picture69_1.png");
 		col2.setAttribute("src", "images/picture70_1.png");
 		col3.setAttribute("src", "images/picture71_2.png");
-		document.getElementById('form1').submit();
 	}
 }
 /*
@@ -425,30 +461,7 @@ function sendContent(other){
 		//alert(document.getElementsByName("job").item(0).value);
 	}
 }
-/*
-function GetXmlHttpObject()
-{
-var xmlHttp=null;
-try
-  {
-  // Firefox, Opera 8.0+, Safari
-  xmlHttp=new XMLHttpRequest();
-  }
-catch (e)
-  {
-  // Internet Explorer
-  try
-    {
-    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-    }
-  catch (e)
-    {
-    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-  }
-return xmlHttp;
-}
-*/
+
 function checkReg(){
 	if("images/picture55.png" == document.getElementById("done").getAttribute("src")){
 		return false;
@@ -457,25 +470,6 @@ function checkReg(){
 		document.getElementById('tishi1').innerHTML="<font color='#f00'>&nbsp;用户名不能为空</font>";
 		//document.form1.user.focus();
 		return false;
-	}else{
-		/*
-		var url="checkUsername.php";
-		url=url+"?username="+document.form1.user.value;
-		xmlHttp.onreadystatechange=stateChanged;
-		xmlHttp.open("GET",url,true);
-		xmlHttp.send(null);
-		}
-	function stateChanged(){
-		if (xmlHttp.readyState==4){
-			if(xmlHttp.responseText == "registed"){
-				document.getElementById('tishi1').innerHTML="<font color='#f00'>&nbsp;用户名已被占用</font>";
-				document.form1.user.focus();
-				return false;
-			}else{
-				document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
-			}
-		}
-		*/
 	}
 	if(document.form1.email.value ==  ''){
 		document.getElementById('tishi2').innerHTML="<font color='#f00'>&nbsp;电子邮件不能为空</font>";
@@ -598,4 +592,93 @@ function checkRegAndPost(){
 	}
 }
 
-function checkcontent(content){}
+function checkcontent(content){
+
+	var sharp = 0, star = 0, comma = 0, key_name = 0;
+	if(content.indexOf('#')>=0) sharp ++ ;
+	if(content.indexOf('*')>=0) star ++;
+	if(content.indexOf(';')>=0) comma ++;
+
+	if(content.indexOf('drop')>=0) key_name ++;
+	if(sharp +　star + comma + key_name > 0 )
+	{
+		alert('请重新输入企业名称！')
+		document.getElementById("company").value = '';
+		document.getElementById("company").focus();
+		return false;
+	}
+	return true;
+}
+
+function changebg(o){
+	o.style.backgroundImage="url('images/picture138.png')";
+	o.childNodes[0].style.color = "#fff";
+}
+function changebgback(o){
+	o.style.backgroundImage="url('images/picture137.png')";
+	o.childNodes[0].style.color = "#ccc";
+}
+function activeGo(num){
+	var gonum = document.getElementsByName("page_jump").item(0).value;
+	if(isNaN(gonum) || (gonum > num) || gonum == '')
+		return false;
+	else{
+		var goimg = document.getElementById("go");
+		goimg.setAttribute("src", "images/picture139.png");
+		goimg.style.cursor = "pointer";
+	}
+}
+function unactiveGo(){
+	var goimg = document.getElementById("go");
+		goimg.setAttribute("src", "images/picture140.png");
+		goimg.style.cursor = "auto";
+}
+function GetXmlHttpObject()
+{
+var xmlHttp=null;
+try
+  {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp=new XMLHttpRequest();
+  }
+catch (e)
+  {
+  // Internet Explorer
+  try
+    {
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  catch (e)
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  }
+return xmlHttp;
+}
+
+function page_jump(toPage){
+	var url = "companyQuery.php";
+	xmlHttp = GetXmlHttpObject();
+	xmlHttp.open('POST',url,true); 
+    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+	var str = 'productsType='+$("input[name='productsType']").val()+"&country="+$("input[name='country']").val()+"&company="+$("input[name='company']").val()+"&order=name"+"&page="+toPage;
+    //alert(str);
+    xmlHttp.send(str); 
+	xmlHttp.onreadystatechange=xmlHttpChange; 
+}
+ function xmlHttpChange() {         
+     if(xmlHttp.readyState==4){             
+          if(xmlHttp.status==200) {                                                      
+           document.getElementById('show_ajax').innerHTML=xmlHttp.responseText; 
+          } 
+     } 
+ } 
+function gotoPage(toPage){
+	var url = "companyQuery.php";
+	xmlHttp = GetXmlHttpObject();
+	xmlHttp.open('POST',url,true); 
+    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+	var str = 'productsType='+$("input[name='productsType']").val()+"&country="+$("input[name='country']").val()+"&company="+$("input[name='company']").val()+"&order=name"+"&page="+toPage;
+    xmlHttp.send(str); 
+	xmlHttp.onreadystatechange=xmlHttpChange; 
+}
