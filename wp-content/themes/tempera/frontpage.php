@@ -18,8 +18,8 @@
 <div id="pp-afterslider" >
 <div style="height:15px;"></div>
 <div class="b1">
-  <div  class="b11" ><img src="images/picture1.png" /></div>
-  <div  class="b12" ><img src="images/picture2.png" /></div>
+  <div  class="b11" ><a href="#"><img src="images/picture1.png" /></a></div>
+  <div  class="b12" ><a href="#"><img src="images/picture2.png" /></a></div>
   
     <table style="display:inline;float:right;margin-right:5px;margin-top:25px;" cellspacing="2">
     	<tr>
