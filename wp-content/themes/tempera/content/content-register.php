@@ -6,9 +6,9 @@
 			<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
 		</ul>
 </div>
-<div class="main">            
-<div id="frontpage" >
-<div id="pp-afterslider" style="height:2020px;">
+<div class="main" style="height:2015px;">            
+<div id="frontpage">
+<div id="pp-afterslider" style="height:2015px;">
 <div style="padding-left:10%;padding-top:5%;">
 <div class="lianxi1">
 	<img src="images/picture32.png">
@@ -137,6 +137,8 @@
 </div>
  
 </div>
+
+
 </div> <!-- #pp-afterslider -->
 
 </div> <!-- #frontpage -->

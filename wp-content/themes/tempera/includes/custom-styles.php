@@ -65,7 +65,7 @@ background:url(images/page_img0.png) top center no-repeat; width:40px; display:i
 .page_img_sel{
 	background:url(images/page_img0.png) top center no-repeat; background-color:#F00; width:40px; display:inline-block; text-align:center;
 	}
-#wrapper { max-height:2050px;}
+#wrapper { }
 .row_type :hover {color:#F00;}
 #done :hover {cursor:pointer;}
 .lianxi1 {}

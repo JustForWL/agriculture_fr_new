@@ -3,9 +3,9 @@ ob_start();
 include('conn.php');
 if(!empty($_POST['canSubmit'])){
 	if(!is_user_logged_in()){
-	    $sanitized_user_login = sanitize_user( $_POST['username'] );
+	    $sanitized_user_login = sanitize_user( $_POST['user'] );
         $user_email = apply_filters( 'user_registration_email', $_POST['email'] );
-		$username = $_POST['username'];
+		$username = $_POST['user'];
 		$email = $_POST['email'];
 		$pass = $_POST['pass'];
 		$club = $_POST['club'];
@@ -72,8 +72,9 @@ if(!empty($_POST['canSubmit'])){
 		}
 		$sql = "insert into userinfo values ("."'".$username."','".$email."','".md5($pass)."','".$club."','".$hangye."','".$companyChineseName."','".$companyEnglishName."','".$scale."','".$companyHomepage."','".$chineseName."','".$firstName."','".$secondName."','".$job."','".$phone."','".$tax."','".$mobilephone."','".$addressChinese."','".$addressEnglish."','".$code."','".$interetingToString."');";
 	    $user_id = wp_create_user( $sanitized_user_login, $_POST['pass'], $user_email);
-		mysql_query($sql, $db_connect); ?>
-		<div id="focus">
+		mysql_query($sql, $db_connect); 
+		?>
+	<div id="focus">
 			<ul>
 				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
 				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
@@ -94,8 +95,8 @@ if(!empty($_POST['canSubmit'])){
             <div style="margin-top:-10%;float:left;;margin-left:48%;">
 	        <ul style="list-style:none;height:85px;">
                     
-                    <li style="display:inline;"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="images/picture133.png"/></a></li>&nbsp;
-                    <li style="display:inline;margin:1px;"><a href="http://wordpress.local" target=""><img src="images/picture132.png" /></a></li>
+                    <li style="display:inline;float:none"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="images/picture133.png"/></a></li>&nbsp;
+                    <li style="display:inline;margin-top:-25px;float:none"><a href="http://wordpress.local" target=""><img src="images/picture132.png" /></a></li>
                     
                 </ul>
           
@@ -104,6 +105,7 @@ if(!empty($_POST['canSubmit'])){
          <div style="height:200px;"></div>
          </div> <!-- #pp-afterslider -->
          </div> <!-- #frontpage -->
+
 	<?php }else{
 		echo "<script type='text/javascript'>alert('你已注册！')</script>";
 		header("Location:http://wordpress.local");

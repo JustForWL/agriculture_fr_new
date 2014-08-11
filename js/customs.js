@@ -100,9 +100,9 @@ $(document).ready(function(){
 					document.getElementById('tishi1').innerHTML="<font color='#f00'>&nbsp;用户名已被占用</font>";
 					canSubmit = false;
 				}else{
-					alert(data);
-					/*document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
-					canSummit = true;*/
+					//alert(data);
+					document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
+					canSummit = true;
 				}
 			}
 			});
