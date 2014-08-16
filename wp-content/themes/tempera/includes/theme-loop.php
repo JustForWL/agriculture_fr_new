@@ -19,7 +19,7 @@ function tempera_excerpt_length( $length ) {
 	global $tempera_excerptwords;
 	return $tempera_excerptwords;
 }
-add_filter( 'excerpt_length', 'tempera_excerpt_length' );
+//add_filter( 'excerpt_length', 'tempera_excerpt_length',1013);
 
 /**
  * Returns a "Continue Reading" link for excerpts
@@ -29,7 +29,8 @@ add_filter( 'excerpt_length', 'tempera_excerpt_length' );
  */
 function tempera_continue_reading_link() {
 	global $tempera_excerptcont;
-	return '<p> <a class="continue-reading-link" href="'. get_permalink() . '">' .$tempera_excerptcont.'<i class="icon-right-dir"></i></a></p>';
+	//return '<p> <a class="continue-reading-link" href="'. get_permalink() . '">' .$tempera_excerptcont.'<i class="icon-right-dir"></i></a></p>';
+	return '<p> <a class="continue-reading-link" href="'. get_permalink() . '">' .'点击阅读'.'<i class="icon-right-dir"></i></a></p>';
 }
 
 /**
@@ -123,7 +124,7 @@ function tempera_trim_excerpt($text) {
      }
      return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
-if ($tempera_excerpttags=='Enable') {
+if ($tempera_excerpttags!='Enable') {
      remove_filter('get_the_excerpt', 'wp_trim_excerpt');
      add_filter('get_the_excerpt', 'tempera_trim_excerpt');
 }

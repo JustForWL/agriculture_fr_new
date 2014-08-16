@@ -1,13 +1,4 @@
-   <div id="focus">
-			<ul>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
-				
-			</ul>
-   </div>
- <div id="main">
+<div id="main">
  <div  id="forbottom" >
 		<?php cryout_forbottom_hook(); ?>
 
@@ -21,15 +12,15 @@
   <div  class="b11" ><a href="#"><img src="images/picture1.png" /></a></div>
   <div  class="b12" ><a href="#"><img src="images/picture2.png" /></a></div>
   
-    <table style="display:inline;float:right;margin-right:5px;margin-top:25px;" cellspacing="2">
+    <table style="display:inline;margin-left:65%;float:left;margin-top:-340px;" cellspacing="2">
     	<tr>
-            <td><div class="divcss5" style="background-image:url(images/picture3.png);width:200px;height:200px;"><a href="#" class="now"><img src="images/picture13.png" style="width:200px;height:200px;"/></a></div></td>
+            <td><div class="divcss5" style="background:url(images/picture3.png) no-repeat ;width:180px;height:180px;"><a href="#" class="now"><img src="images/picture13.png" style="width:180px;height:180px;"/></a></div></td>
 			<td>&nbsp;</td>
-            <td><div class="divcss5" style="background-image:url(images/picture4.png);width:200px;height:200px;"></div></td>
+            <td><div class="divcss5" style="background:url(images/picture4.png) no-repeat;width:180px;height:180px;"></div></td>
         </tr>
-             <td><div class="divcss5" style="background-image:url(images/picture5.png);width:200px;height:200px;"></div></td>
+             <td><div class="divcss5" style="background:url(images/picture5.png) no-repeat;width:180px;height:180px;"></div></td>
 			 <td>&nbsp;</td>
-             <td><div class="divcss5" style="background-image:url(images/picture6.png);width:200px;height:200px;"></div></td>
+             <td><div class="divcss5" style="background:url(images/picture6.png) no-repeat;width:180px;height:180px;"></div></td>
          
  	</table>
 </div>
@@ -67,7 +58,7 @@
 </div>
 <div class="b1"><img src="images/picture17.png" usemap="#findCompany" style="margin-left:50px;"><map name="findCompany"><area shape="rect" coords="18,268,123,293" href="#" /></map></div>
 <div class="b1">
-	<div style="margin-left:50px;display:inline;"><a href="#"><img src="images/picture18.png" /></a></div>
+	<div style="margin-left:5%;display:inline;"><a href="#"><img src="images/picture18.png" /></a></div>
 	<div style="float:right;height:300px;"><div style="padding-left:10px;margin-top:10px;"><img src="images/picture19.png" /></div>
 		<ul style="list-style:none;height:85px;margin-top:20px;margin-left:10px;">
 			<li style="display:inline;margin:3px;"><img src="images/picture20.png" height="80px;width:80px;"/></li>

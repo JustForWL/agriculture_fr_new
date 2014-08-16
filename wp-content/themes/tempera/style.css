@@ -45,6 +45,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	min-width:1100px;
 }
 ol, ul {
 	list-style: none;
@@ -64,7 +65,7 @@ table {
 
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-	font-weight: normal;
+	/*font-weight: normal;*/
 }
 #content h1,#content h2,#content h3,#content h4,#content h5,#content h6 {
 	clear: none;
@@ -389,9 +390,6 @@ input[type="search"], input[type="tel"], input[type="time"], input[type="url"], 
 	-webkit-transition:background-color .2s;
 	transition:background-color .2s;
 	font-family:inherit;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
 }
 input[type="file"] { border-color: transparent !important; }
 
@@ -911,9 +909,7 @@ float:left;
 font-size:14px;
 padding:0 3px;
 margin-right:5px;
--moz-border-radius:100px;
--webit-border-radius:100px;
-border-radius:100px;
+
 }
 
 h3.entry-format > i:before {cursor:default;}
@@ -936,9 +932,7 @@ h3.entry-format > i:before {cursor:default;}
 	margin-bottom: 12px;
 }
 .entry-content fieldset {
-	border: 1px solid transparent;
-	margin: 0 0 24px 0;
-	padding: 24px;
+	padding: 10px;
 }
 .entry-content fieldset legend {
 	font-weight: bold;
@@ -1849,9 +1843,7 @@ margin-bottom:20px;padding:10px;
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
-	-moz-border-radius:5px;
-	-webkit-border-radius:5px;
-	border-radius:5px;
+	
 }
 
 .contentsearch #searchform input[type="text"] {
@@ -2128,14 +2120,15 @@ article.post, article.page {
 	overflow:hidden;
 	margin:0;
 	padding:0;
-	margin-bottom:36px;
+	margin-bottom:18px;
+	
+	border-bottom:#ccc 2px dotted;
 }
 
 div.post, div.page, .yoyo > li {
 	display:block;
 	overflow:hidden;
 	padding:0;
-	margin-bottom:36px;
 }
 
 article.sticky {

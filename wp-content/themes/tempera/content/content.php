@@ -12,10 +12,10 @@ foreach ($options as $key => $value) {
      ${"$key"} = $value ;
 } 
 
-?><?php cryout_before_article_hook(); ?>
+?><?php //cryout_before_article_hook(); ?>
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+			
 		<header class="entry-header">			
 			<h2 class="entry-title">
 				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'tempera' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -31,7 +31,7 @@ foreach ($options as $key => $value) {
 			
 						<?php if ($tempera_excerptarchive != "Full Post" ){ ?>
 						<div class="entry-summary">
-						<?php tempera_set_featured_thumb(); ?>
+						<?php //tempera_set_featured_thumb(); ?>
 						<?php the_excerpt(); ?>
 						</div><!-- .entry-summary -->
 						<?php } else { ?>
@@ -59,9 +59,9 @@ foreach ($options as $key => $value) {
 
 			endif; ?>
 
-		<footer class="entry-meta">
+		<!--<footer class="entry-meta">
 			<?php cryout_post_after_content_hook();  ?>
-		</footer>
+		</footer>-->
 	</article><!-- #post-<?php the_ID(); ?> -->
 	
 	

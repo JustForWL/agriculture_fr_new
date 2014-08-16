@@ -11,12 +11,15 @@ get_header(); ?>
 
 		<section id="container" class="<?php echo tempera_get_layout_class(); ?>">
 			<div id="content" role="main">
+			<div id="main">
+			<div id="frontpage">
+			<div id="pp-afterslider">
 	<?php cryout_before_content_hook(); ?>
 	
 			<?php if ( have_posts() ) : ?>
 
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tempera' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-	<div class="contentsearch"><?php get_search_form(); ?></div>
+				<!--<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'tempera' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+	<div class="contentsearch"><?php get_search_form(); ?></div>-->
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -45,6 +48,9 @@ get_header(); ?>
 
 
 			<?php cryout_after_content_hook(); ?>
+			</div>
+			</div>
+			</div>
 			</div><!-- #content -->
 		<?php tempera_get_sidebar(); ?>
 		</section><!-- #primary -->

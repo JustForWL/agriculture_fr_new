@@ -24,6 +24,10 @@ $(function(){
 	});
 });
 $(document).ready(function(){
+	var notification = document.getElementById('notification');
+	if(notification){
+		document.getElementById("cleanlogin").style.marginTop="-32%";
+	}
 	$("input[name='user']").focus(function(){
 		document.getElementById("tishi1").innerHTML='';
 	}
@@ -44,7 +48,7 @@ $(document).ready(function(){
 		//this is for the order by name
 	$("#col1").click(function(){
 		var pageID = $("#pageID").val();
-		document.getElementById('show_ajax').innerHTML = '';
+		//document.getElementById('show_ajax').innerHTML = '';
 		$.ajax({
 			type:'POST',
 			url:'companyQuery.php',
@@ -59,7 +63,7 @@ $(document).ready(function(){
 		//this is for the order by products	
 	$("#col2").click(function(){
 		var pageID = $("#pageID").val();
-		document.getElementById('show_ajax').innerHTML = '';
+		//document.getElementById('show_ajax').innerHTML = '';
 		$.ajax({
 			type:'POST',
 			url:'companyQuery.php',
@@ -74,7 +78,7 @@ $(document).ready(function(){
 				//this is for the order by exportation_countries
 	$("#col3").click(function(){
 		var pageID = $("#pageID").val();
-	    document.getElementById('show_ajax').innerHTML = '';
+	    //document.getElementById('show_ajax').innerHTML = '';
 		$.ajax({
 			type:'POST',
 			url:'companyQuery.php',
@@ -153,6 +157,17 @@ $(document).ready(function(){
 		document.getElementById("tishi13").innerHTML='';
 	}
 	);
+	
+	var other1 = document.getElementById('other1');
+	if(other1){
+	    if(other1.value!='')
+		  other1.removeAttribute("readonly");
+	}
+	var other2 = document.getElementById('other2');
+	if(other2){
+	    if(other2.value!='')
+		  other2.removeAttribute("readonly");
+	}
 }
 );
 $(function() {
@@ -496,7 +511,7 @@ function checkReg(){
 	}else{
 		if((document.form1.pass2.value != document.form1.pass.value)){
 			document.getElementById('tishi4').innerHTML="<font color='#f00'>&nbsp;前后密码不一致</font>";
-			document.form1.passagain.focus();
+			//document.form1.passagain.focus();
 			return false;
 		}
 	}
@@ -581,17 +596,138 @@ function checkReg(){
 		   return false;
 		}
 	}
-	if(canSubmit){
-		document.getElementById("reg").submit();
-	}
 }
 function checkRegAndPost(){
-	if(!checkReg()){
+	if(!(checkReg() && canSubmit)){
 		document.form1.checkDone.checked = false;
 		document.getElementById('done').setAttribute("src", "images/picture55.png");
+	}else{
+	  document.getElementById("reg").submit();
 	}
 }
-
+function checkReg2(){
+if(document.updateform.pass.value == ''){
+		document.getElementById('tishi3').innerHTML="<font color='#f00'>&nbsp;密码不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('1');
+		return false;
+	}
+	if(document.updateform.pass2.value == ''){
+		document.getElementById('tishi4').innerHTML="<font color='#f00'>&nbsp;确认密码不能为空</font>";
+		//document.updateform.passagain.focus();
+		//alert('2');
+		return false;
+	}else{
+		if((document.updateform.pass2.value != document.updateform.pass.value)){
+			document.getElementById('tishi4').innerHTML="<font color='#f00'>&nbsp;前后密码不一致</font>";
+			//document.updateform.passagain.focus();
+			//alert('3');
+			return false;
+		}
+	}
+	
+	if(document.updateform.companyChineseName.value == ''){
+		document.getElementById('tishi5').innerHTML="<font color='#FF0000' >&nbsp;公司名称不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('4');
+		return false;
+	}
+	if(document.updateform.companyEnglishName.value == ''){
+		document.getElementById('tishi6').innerHTML="<font color='#FF0000' >&nbsp;公司名称不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('5');
+		return false;
+	
+	}
+	if(document.updateform.chineseName.value == ''){
+		document.getElementById('tishi7').innerHTML="<font color='#FF0000' >&nbsp;姓名不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('6');
+		return false;
+	
+	}
+	if(document.updateform.firstName.value == ''){
+		document.getElementById('tishi8').innerHTML="<font color='#FF0000' >&nbsp;姓/名不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('7');
+		return false;
+	
+	}
+	if(document.updateform.secondName.value == ''){
+		document.getElementById('tishi8').innerHTML="<font color='#FF0000' >&nbsp;姓/名不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('8');
+		return false;
+	
+	}
+	if(document.updateform.phone.value == ''){
+		document.getElementById('tishi9').innerHTML="<font color='#FF0000' >&nbsp;电话不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('9');
+		return false;
+	
+	}else{
+		var phone =/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
+		if(!phone.test(document.updateform.phone.value)){
+		  document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的电话号码</font>";
+		 //  document.updateform.phone.focus();
+		 //alert('10');
+		   return false;
+		}
+	}
+	if(document.updateform.mobilephone.value == ''){
+		document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;手机号码不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('11');
+		return false;
+	
+	}else{
+		var cellphone= /(^1[3|5|8][0-9]{9}$)/;
+		if(!cellphone.test(document.updateform.mobilephone.value)){
+		  document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
+		 // document.updateform.mobilephone.focus();
+		 //alert('12');
+		  return false;
+		}
+	}
+	if(document.updateform.addressChinese.value == ''){
+		document.getElementById('tishi11').innerHTML="<font color='#FF0000' >&nbsp;地址不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('13');
+		return false;
+	
+	}
+	if(document.updateform.addressEnglish.value == ''){
+		document.getElementById('tishi12').innerHTML="<font color='#FF0000' >&nbsp;地址不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('14');
+		return false;
+	
+	}
+	if(document.updateform.code.value == ''){
+		document.getElementById('tishi13').innerHTML="<font color='#FF0000' >&nbsp;邮政编码不能为空</font>";
+		//document.updateform.pass.focus();
+		//alert('15');
+		return false;
+	
+	}else{
+		var  code =/^[0-9]{6}$/;  
+		if(!code.test(document.updateform.code.value)){
+		  document.getElementById('tishi13').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
+		  //document.updateform.mobilephone.focus();
+		  //alert('16');
+		   return false;
+		}
+	}
+	return true;
+}
+function checkupdate(){
+   if(!(checkReg2())){
+		//alert('failed');
+	}else{
+	  document.getElementById("updateform").submit();
+	}
+}
 function checkcontent(content){
 
 	var sharp = 0, star = 0, comma = 0, key_name = 0;

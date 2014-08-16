@@ -4,13 +4,11 @@
 	$edit_url = get_option( 'cl_edit_url', '');
 ?>
 
-<div class="cleanlogin-container" >
+<div class="cleanlogin-container-custom" >
 	<div class="cleanlogin-preview">
 		<div class="cleanlogin-preview-top">
-			<a href="<?php echo add_query_arg( 'action', 'logout' ); ?>" class="cleanlogin-preview-logout-link"><?php echo __( 'Log out', 'cleanlogin' ); ?></a>	
-			<?php if ( $edit_url != '' )
-				echo "<a href='$edit_url' class='cleanlogin-preview-edit-link'>". __( 'Edit my profile', 'cleanlogin' ) ."</a>";
-			?>
+            <a href="http://wordpress.local" class="cleanlogin-preview-logout-link-custom"><?php echo __( '回到首页', 'cleanlogin' ); ?></a><span>&nbsp;&nbsp;</span>
+			<a href="<?php echo add_query_arg( 'action', 'logout' ); ?>" class="cleanlogin-preview-logout-link-custom"><?php echo __( '登出', 'cleanlogin' ); ?></a>	
 		</div>
 		
 		<?php echo get_avatar( $current_user->ID, 128 ); ?>

@@ -70,19 +70,10 @@ if(!empty($_POST['canSubmit'])){
 			if(9 == $val) $interetingToString = $interetingToString . '  肉制品';
 			if(10 == $val) $interetingToString = $interetingToString . ' 方便及半成品';
 		}
-		$sql = "insert into userinfo values ("."'".$username."','".$email."','".md5($pass)."','".$club."','".$hangye."','".$companyChineseName."','".$companyEnglishName."','".$scale."','".$companyHomepage."','".$chineseName."','".$firstName."','".$secondName."','".$job."','".$phone."','".$tax."','".$mobilephone."','".$addressChinese."','".$addressEnglish."','".$code."','".$interetingToString."');";
+		$sql = "insert into userinfo values ("."'".$username."','".$email."','".$club."','".$hangye."','".$companyChineseName."','".$companyEnglishName."','".$scale."','".$companyHomepage."','".$chineseName."','".$firstName."','".$secondName."','".$job."','".$phone."','".$tax."','".$mobilephone."','".$addressChinese."','".$addressEnglish."','".$code."','".$interetingToString."');";
 	    $user_id = wp_create_user( $sanitized_user_login, $_POST['pass'], $user_email);
 		mysql_query($sql, $db_connect); 
 		?>
-	<div id="focus">
-			<ul>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
-				<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
-				
-			</ul>
-		 </div>
          <div id="main" >
          <div id="frontpage" >
          <div id="pp-afterslider">

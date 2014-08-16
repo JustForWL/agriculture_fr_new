@@ -1,11 +1,3 @@
-<div id="focus">
-		<ul>
-			<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
-		</ul>
-</div>
 <div class="main" style="height:2015px;">            
 <div id="frontpage">
 <div id="pp-afterslider" style="height:2015px;">
@@ -86,10 +78,10 @@
           <div style="height:15px;"></div>
           <div class="b7">
           <img src="images/picture121.png"><br />
-         <textarea name="addressChinese" cols="50" value="" ></textarea><span id="tishi11" style="font-size:12px;"></span>
+         <textarea name="addressChinese" cols="50" ></textarea><span id="tishi11" style="font-size:12px;"></span>
          <div style="height:15px;"></div>
          <img src="images/picture120.png"><br />
-         <textarea name="addressEnglish" cols="50" value="" ></textarea><span id="tishi12" style="font-size:12px;"></span>
+         <textarea name="addressEnglish" cols="50" ></textarea><span id="tishi12" style="font-size:12px;"></span>
           <div style="height:15px;"></div>
           <img src="images/picture119.png"><br />
           <input type="text" size="50" name="code"><span id="tishi13" style="font-size:12px;"></span>
@@ -99,7 +91,7 @@
           <div style="height:15px;"></div>
           <div class="b7">
           <img src="images/picture118.png"><br />
-          <input type="checkbox" value="1" name="interesting[]">
+          <input type="checkbox" value="1" name="interesting[]" checked>
             <font color="#666666">葡萄酒及烈酒</font>
           <div style="width:120px;display:inline-block;">&nbsp;</div><input type="checkbox" value="2" name="interesting[]">
           <font color="#666666">谷物制品</font><br />

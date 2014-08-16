@@ -34,11 +34,11 @@ function show_clean_login($atts) {
 	
 	if ( isset( $_GET['authentication'] ) ) {
 		if ( $_GET['authentication'] == 'success' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'Successfully logged in!', 'cleanlogin' ) ."</p></div>";
+			wp_safe_redirect("http://wordpress.local");
 		else if ( $_GET['authentication'] == 'failed' )
-			echo "<div class='cleanlogin-notification error'><p>". __( 'Wrong credentials', 'cleanlogin' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification error' id='notification'><p>". __( '用户名或密码错误', 'cleanlogin' ) ."</p></div>";
 		else if ( $_GET['authentication'] == 'logout' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'Successfully logged out!', 'cleanlogin' ) ."</p></div>";
+			wp_safe_redirect("http://wordpress.local");
 	}
 
 	if ( is_user_logged_in() ) {
@@ -142,13 +142,13 @@ function show_clean_login_restore($atts) {
 
 	if ( isset( $_GET['sent'] ) ) {
 		if ( $_GET['sent'] == 'success' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'You will receive an email with the activation link', 'cleanlogin' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification success' id='notification'><p>". __( '您将收到带有激活链接的邮件', 'cleanlogin' ) ."</p></div>";
 		else if ( $_GET['sent'] == 'sent' )
-			echo "<div class='cleanlogin-notification success'><p>". __( 'You may receive an email with the activation link', 'cleanlogin' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification success' id='notification'><p>". __( '您可能收到带有激活链接的邮件', 'cleanlogin' ) ."</p></div>";
 		else if ( $_GET['sent'] == 'failed' )
-			echo "<div class='cleanlogin-notification error'><p>". __( 'An error has ocurred sending the email', 'cleanlogin' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification error' id='notification'><p>". __( '发送邮件时出错', 'cleanlogin' ) ."</p></div>";
 		else if ( $_GET['sent'] == 'wronguser' )
-			echo "<div class='cleanlogin-notification error'><p>". __( 'Username is not valid', 'cleanlogin' ) ."</p></div>";
+			echo "<div class='cleanlogin-notification error' id='notification'><p>". __( '用户名无效', 'cleanlogin' ) ."</p></div>";
 	}
 
 	if ( !is_user_logged_in() ) {

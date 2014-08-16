@@ -9,20 +9,24 @@ Please, take note most of these rules doesn't have to be modified, it's full ada
 to your current WordPress template, and if something behaves abnormal please contact us before.
 
 */
-
 .cleanlogin-container {
-	margin: 0 auto;
+	float:left;
+	margin-left:50%;
+	margin-top:-25%;
 	max-width: 300px;
 	position: relative;
 	overflow: hidden;
-	padding: 26px 24px 36px;
-	-webkit-box-shadow: 2px 2px 3px rgba(0,0,0,.25);
-	box-shadow: 2px 2px 3px rgba(0,0,0,.25);
-	border-radius: 5px;
-	border: 1px solid #ddd;
 	
 }
-
+.cleanlogin-container-custom {
+	float:left;
+	margin-left:60%;
+	margin-top:-25%;
+	max-width: 300px;
+	position: relative;
+	overflow: hidden;
+	
+}
 .cleanlogin-container fieldset {
 	border-width: 0;
 	border-color: inherit;
@@ -87,7 +91,7 @@ to your current WordPress template, and if something behaves abnormal please con
 .cleanlogin-form input[type="submit"] {
 	height: 36px;
 	padding: 4px 8px;
-	width: 100%;
+	
 }
 
 .cleanlogin-form button,
@@ -133,7 +137,6 @@ to your current WordPress template, and if something behaves abnormal please con
 }
 
 .cleanlogin-preview-top {
-	padding-bottom: 36px;
 	height: 24px;
 }
 
@@ -176,11 +179,13 @@ to your current WordPress template, and if something behaves abnormal please con
 	background: #FFE7E7;
 	border-color: #FF5656;
 	color: #FF5656;
+	height:20px;
 }
 
 .cleanlogin-preview {
 	border-color: inherit;
 	text-align: center;
+	
 }
 
 .cleanlogin-preview .avatar {
@@ -200,14 +205,20 @@ to your current WordPress template, and if something behaves abnormal please con
 .cleanlogin-form a.cleanlogin-form-register-link,
 .cleanlogin-preview a.cleanlogin-preview-logout-link {
 	text-align: right;
-	float: right;
+	float: left;
+	margin-left:40%;
 	text-decoration: none;
 }
-
+.cleanlogin-form a.cleanlogin-form-register-link-custom,
+.cleanlogin-preview a.cleanlogin-preview-logout-link-custom {
+	text-align: right;
+	text-decoration: none;
+}
 .cleanlogin-form a.cleanlogin-form-login-link,
 .cleanlogin-form a.cleanlogin-form-pwd-link,
 .cleanlogin-preview a.cleanlogin-preview-edit-link {
 	text-align: left;
-	float: left;
+	float: right;
+	margin-right:15%;
 	text-decoration: none;
 }

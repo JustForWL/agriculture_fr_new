@@ -3,7 +3,7 @@
 	get_currentuserinfo();
 ?>
 
-<div class="cleanlogin-container cleanlogin-full-width">
+<div class="cleanlogin-container cleanlogin-full-width" id="cleanlogin" style='display:none;'>
 	<form class="cleanlogin-form" method="post" action="#">
 
 		<h4><?php echo __( 'General information', 'cleanlogin' ); ?></h4>

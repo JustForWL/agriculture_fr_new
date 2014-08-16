@@ -34,6 +34,8 @@ $colPadding = 30;
 $contentSize = $contentSize - 60;
 
 ?>
+#done2 {cursor:pointer;}
+.login { background-color:#FFF;max-width:1000px;margin-left:15%;margin-top:-8px;}
 .selectedone {background:url('images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
 .unselectedone {background:url('images/picture137.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
 .cur{cursor:pointer; display:block;color:#788F72;width:250px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
@@ -65,7 +67,7 @@ background:url(images/page_img0.png) top center no-repeat; width:40px; display:i
 .page_img_sel{
 	background:url(images/page_img0.png) top center no-repeat; background-color:#F00; width:40px; display:inline-block; text-align:center;
 	}
-#wrapper { }
+#wrapper {background:url(http://localhost/agriculture_fr/images/bg.jpg) repeat-y;  }
 .row_type :hover {color:#F00;}
 #done :hover {cursor:pointer;}
 .lianxi1 {}
@@ -81,7 +83,7 @@ BORDER-BOTTOM-STYLE: dashed; BORDER-LEFT-STYLE:dashed; BORDER-RIGHT-STYLE: dashe
 }
 .news {margin-top:40px;margin-left:-10%;}
 .b4 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; float: left; margin-left: 70%; margin-top: 0; position: relative;}
-.headersearch2 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; float: right; margin-left: 18%; margin-top: 0;; position: relative;}
+.headersearch2 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; margin-left: 15%; margin-top: 0; position: relative;}
 .b3 {margin-left:50px;}
 .pr1 {height:40px;}
 .col{margin-left:2%;}
@@ -91,7 +93,7 @@ body { max-width:1366px;}
 .b1 {margin-left:-12%;}
 .b2 {margin-left:-5%;margin-top:10px;}
 .b11 {display:inline;margin-left:10px;}
-.b12 {display:inline;margin-left:110px;}
+.b12 {display:inline;margin-left:5%;}
 .rollBox {display:block;height:220px;margin-top:10px;margin-left:-4%;}
 .rollBox .scrollcon{width:1140px;height:200px;position:absolute;}
 .rollBox .LeftBotton{height:30px;width:22px;background:url(images/picture16_1.png); no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-top:80px;cursor:pointer;margin-left:10%;}
@@ -120,7 +122,7 @@ body { max-width:1366px;}
 #focus .btn{position:absolute;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
 #focus .btn span{display:inline-block;_display:inline;_zoom:1;width:25px;height:10px;_font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
 #focus .btn span.on{background:#fff;}
-#focus .preNext{width:45px;height:100px;position:absolute;top:90px;background:url(wp-content/themes/tempera/images/slider/sprite.png) no-repeat 0 0;cursor:pointer;}
+#focus .preNext{width:45px;height:100px;position:absolute;top:90px;background:url(http://wordpress.local/wp-content/themes/tempera/images/slider/sprite.png) no-repeat 0 0;cursor:pointer;}
 #focus .pre{left:0;}
 #focus .next{right:0;background-position:right top;}
 #popmenu {
@@ -128,9 +130,9 @@ body { max-width:1366px;}
 	position:absolute;
 	border:#000000 1px solid;
 	visibility:hidden;
-	margin-left:15%;
+	margin-left:5%;
 }
-.selectLanguage1 {display:inline;height:39px;line-height:39px;margin-left:15%;}
+.selectLanguage1 {display:inline;height:39px;line-height:39px;margin-left:5%;}
 .selectLanguage2 {display:inline;height:39px;line-height:39px;}
 #sheader{display:inline-block;float:left;}
 #topbar {height:38px;}
@@ -197,8 +199,16 @@ body { font-family: <?php echo ((!$tempera_googlefont)?$tempera_fontfamily:"\"$t
 <?php
 ////////// COLORS //////////
 ?>
-
-#footer {background-color:#111}
+.page_navigation {height:36px;}
+.page_navi{overflow:hidden;width:100%;text-align:center}
+.page_navi a{height:36px;border:1px solid #DDD;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;color:#888;text-decoration:none;line-height:36px;margin:2px;padding:3px 8px}
+.page_navi a:hover,.page_navi a.current{border:1px solid #FFBB76;color:#FF7200;font-weight:bolder}
+.entry-header {display:none}
+.entry-summary h2 {color:#0000ff;}
+.entry-summary h3 {color:#3366ff;}
+.leftimg {margin-left:10%;}
+.topimg {float:left;margin-left:50%;margin-top:-35%;}
+#footer {}
 body { color: <?php echo $tempera_contentcolortxt; ?>; background-color: <?php echo $tempera_backcolormain; ?> }
 a { color: <?php echo $tempera_linkcolortext; ?>; }
 a:hover,.entry-meta span a:hover, .comments-link a:hover { color: <?php echo $tempera_linkcolorhover; ?>; }
@@ -233,7 +243,7 @@ border-bottom-color:<?php echo cryout_hexadder($tempera_submenucolorbgdefault,'-
 #access ul ul li.current_page_item > a, #access ul ul li.current-menu-item > a {
 background-color: #F00<?php/* echo cryout_hexadder($tempera_submenucolorbgdefault,'14');*/?>; }
 <?php if (cryout_hex2rgb($tempera_submenucolorshadow)): ?>#access ul ul { box-shadow: 3px 3px 0 rgba(<?php echo cryout_hex2rgb($tempera_submenucolorshadow); ?>,0.3); }<?php endif; ?>
-body {background:url(http://localhost/agriculture_fr/images/bg.jpg) no-repeat; }
+body {}
 
 #topbar {
 <?php if ($tempera_topbar == 'Hide'){ ?> display:none; <?php } 
