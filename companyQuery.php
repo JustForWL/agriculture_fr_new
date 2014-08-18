@@ -1,22 +1,38 @@
 
 <?php 
 include('conn.php');
-$proType = $_POST['productsType']; 
+$proType = trim($_POST['productsType']); 
 
-$country = $_POST['country']; 
-$company = $_POST['company']; 
+$country = trim($_POST['country']); 
+$company = trim($_POST['company']); 
 $order = $_POST['order'];
-$company = "%". $company."%";       
+      
 
 
-$rs = mysql_query("SELECT count(*) FROM companies WHERE (name like '$company' AND country= '$country' AND products = '$proType')");
+if('请选择'==$proType  && '请选择'==$country && $company == '')
+		$sql = "SELECT count(*) FROM companies;";
+	if('请选择'==$proType  && '请选择'!=$country && $company == '')
+		$sql = "SELECT count(*) FROM companies where country='$country';";
+	if('请选择'==$proType  && '请选择'==$country && $company != '')
+		$sql = "SELECT count(*) FROM companies where name like '%$company%';";
+	if('请选择'==$proType  && '请选择'!=$country && $company != '')
+		$sql = "SELECT count(*) FROM companies where(country='$country' and name like '%$company%');";
+	if('请选择' !=$proType  && '请选择'==$country && $company == '')
+		$sql = "SELECT count(*) FROM companies where products like '%$proType%';";
+	if('请选择'!=$proType  && '请选择'!=$country && $company == '')
+		$sql = "SELECT count(*) FROM companies where (products like '%$proType%' and country='$country');";
+	if('请选择'!=$proType  && '请选择'==$country && $company != '')
+		$sql = "SELECT count(*) FROM companies where (products like '%$proType%' and company like '%$company%');";
+	if('请选择'!=$proType  && '请选择'!=$country && $company != '')
+		$sql = "SELECT * FROM companies where (products like '%$proType%' and country='$country' and company like '%$company%');";
+$rs = mysql_query($sql);
 $myrow = mysql_fetch_array($rs);
-$pagesize = 15;
+$pagesize = 100;
 $numrows = $myrow[0];
 $pages = intval($numrows/$pagesize);
 if($numrows%$pagesize)
 	$pages++;
-		
+//echo $sql;		
 if(isset($_POST['page'])){
 		$page = intval($_POST['page']);
 		if ($page < 1){
@@ -31,12 +47,26 @@ if(isset($_POST['page'])){
 
 	if ($order == '')
 	$order = "name";
-	
-	$sql = "SELECT * FROM companies WHERE (name like '$company' AND country= '$country' AND products = '$proType') order by $order desc limit $offset, $pagesize;";
-	//echo $sql;
+	if('请选择'==$proType  && '请选择'==$country && $company == '')
+		$sql = "SELECT * FROM companies order by $order desc limit $offset, $pagesize;";
+	if('请选择'==$proType  && '请选择'!=$country && $company == '')
+		$sql = "SELECT * FROM companies where country='$country' order by $order desc limit $offset, $pagesize;";
+	if('请选择'==$proType  && '请选择'==$country && $company != '')
+		$sql = "SELECT * FROM companies where name like '%$company%' order by $order desc limit $offset, $pagesize;";
+	if('请选择'==$proType  && '请选择'!=$country && $company != '')
+		$sql = "SELECT * FROM companies where(country='$country' and name like '%$company%') order by $order desc limit $offset, $pagesize;";
+	if('请选择' !=$proType  && '请选择'==$country && $company == '')
+		$sql = "SELECT * FROM companies where products like '%$proType%' order by $order desc limit $offset, $pagesize;";
+	if('请选择'!=$proType  && '请选择'!=$country && $company == '')
+		$sql = "SELECT * FROM companies where (products like '%$proType%' and country='$country') order by $order desc limit $offset, $pagesize;";
+	if('请选择'!=$proType  && '请选择'==$country && $company != '')
+		$sql = "SELECT * FROM companies where (products like '%$proType%' and company like '%$company%')order by $order desc limit $offset, $pagesize;";
+	if('请选择'!=$proType  && '请选择'!=$country && $company != '')
+		$sql = "SELECT * FROM companies where (products like '%$proType%' and country='$country' and company like '%$company%') order by $order desc limit $offset, $pagesize;";
 	$rs = mysql_query($sql);
 	$data = '';
 	$dataDiv = '';
+	//echo $sql;
 	if($myrow = mysql_fetch_array($rs)){
 			$i = 0;
 			do{

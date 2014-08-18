@@ -1,5 +1,32 @@
-﻿var canSubmit = true;
+﻿function GetXmlHttpObject()
+{
+var xmlHttp=null;
+try
+  {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp=new XMLHttpRequest();
+  }
+catch (e)
+  {
+  // Internet Explorer
+  try
+    {
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  catch (e)
+    {
+    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+  }
+return xmlHttp;
+}
+var xmlHttp;
+var canSubmit = true;
 $(function(){
+    var show_ajax = document.getElementById("show_ajax");
+	if(show_ajax) {
+		if(0 == show_ajax.style.height) show_ajax.style.height = "2500px";
+	}
 	$("input[name='hangye']").each(function(){
 		if($(this).val() == '7'){
 			$(this).bind('click',function(){
@@ -33,6 +60,7 @@ $(document).ready(function(){
 	}
 	);
 	$("input[name = 'search']").click(function(){
+	    show_ajax.style.height = "auto";
 		$.ajax({
 			type:'POST',
 			url:'companyQuery.php',
@@ -420,8 +448,38 @@ function askContent(content){
 function $$$$$(_sId){
  return document.getElementById(_sId);
  }
-function hide(_sId)
- {$$$$$(_sId).style.display = $$$$$(_sId).style.display == "none" ? "" : "none";}
+function hide(_sId){
+ if("HMF-1" == _sId) {
+	var url = "productsAndcountryQuery.php";
+	xmlHttp = GetXmlHttpObject();
+	xmlHttp.open('POST',url,false); 
+    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+	var str = "target='products'";
+    xmlHttp.send(str); 
+	//alert(str);
+	xmlHttp.onreadystatechange=showPro(_sId); 
+ }
+ if('HMF-2' == _sId) {
+	var url = "productsAndcountryQuery.php";
+	xmlHttp = GetXmlHttpObject();
+	xmlHttp.open('POST',url,false); 
+    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+	var str = "target='country'";
+    //alert(str);
+    xmlHttp.send(str); 
+	xmlHttp.onreadystatechange=showPro(_sId); 
+ }
+$$$$$(_sId).style.display = $$$$$(_sId).style.display == "none" ? "" : "none";
+}
+function showPro(target){
+    //alert(document.getElementById(target));
+	if(xmlHttp.readyState==4){             
+          if(xmlHttp.status==200) { 
+           //alert("ok");		  
+           $$$$$(target).innerHTML=xmlHttp.responseText; 
+          } 
+     } 
+}
 function pick(v,s,d) {
  document.getElementById(s).value=v;
 hide(d)
@@ -768,28 +826,6 @@ function unactiveGo(){
 	var goimg = document.getElementById("go");
 		goimg.setAttribute("src", "images/picture140.png");
 		goimg.style.cursor = "auto";
-}
-function GetXmlHttpObject()
-{
-var xmlHttp=null;
-try
-  {
-  // Firefox, Opera 8.0+, Safari
-  xmlHttp=new XMLHttpRequest();
-  }
-catch (e)
-  {
-  // Internet Explorer
-  try
-    {
-    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-    }
-  catch (e)
-    {
-    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-  }
-return xmlHttp;
 }
 
 function page_jump(toPage){

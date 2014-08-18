@@ -38,10 +38,10 @@ $contentSize = $contentSize - 60;
 .login { background-color:#FFF;max-width:1000px;margin-left:15%;margin-top:-8px;}
 .selectedone {background:url('images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
 .unselectedone {background:url('images/picture137.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
-.cur{cursor:pointer; display:block;color:#788F72;width:250px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
-.am{border-color:#D10024;border: 0px;color:#fff;cursor: pointer; width: 150px;height: 19px;margin:10px 0px 0px 10px; padding:3px 0px 0px 2px;}
-.bm{background-color:#FFF;width:250px; margin-left:75px;position:absolute; z-index:100;margin-top:2px;}
-.bm2{background-color:#FFF;width: 250px; margin-left:55px;position:absolute; z-index:100;margin-top:2px;}
+.cur{cursor:pointer; display:block;color:#788F72;width:270px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
+.am{border-color:#D10024;border: 0px;color:#ccc;cursor: pointer; width: 150px;height: 19px;margin:10px 0px 0px 10px; padding:3px 0px 0px 2px;}
+.bm{background-color:#ccc;width:270px; margin-left:50px;position:absolute; z-index:100;margin-top:2px;}
+.bm2{background-color:#ccc;width: 255px; margin-left:55px;position:absolute; z-index:100;margin-top:2px;}
 ul li{ float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden}
 #row_1:hover{ color:#F00}
 #row_2:hover{ color:#F00}
@@ -58,6 +58,91 @@ ul li{ float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow
 #row_13:hover{ color:#F00}
 #row_14:hover{ color:#F00}
 #row_15:hover{ color:#F00}
+#row_16 :hover {color:#f00}
+#row_17 :hover {color:#f00}
+#row_18 :hover {color:#f00}
+#row_19 :hover {color:#f00}
+#row_20 :hover {color:#f00}
+#row_21 :hover {color:#f00}
+#row_22 :hover {color:#f00}
+#row_23 :hover {color:#f00}
+#row_24 :hover {color:#f00}
+#row_25 :hover {color:#f00}
+#row_26 :hover {color:#f00}
+#row_27 :hover {color:#f00}
+#row_28 :hover {color:#f00}
+#row_29 :hover {color:#f00}
+#row_30 :hover {color:#f00}
+#row_31 :hover {color:#f00}
+#row_32 :hover {color:#f00}
+#row_33 :hover {color:#f00}
+#row_34 :hover {color:#f00}
+#row_35 :hover {color:#f00}
+#row_36 :hover {color:#f00}
+#row_37 :hover {color:#f00}
+#row_38 :hover {color:#f00}
+#row_39 :hover {color:#f00}
+#row_40 :hover {color:#f00}
+#row_41 :hover {color:#f00}
+#row_42 :hover {color:#f00}
+#row_43 :hover {color:#f00}
+#row_44 :hover {color:#f00}
+#row_45 :hover {color:#f00}
+#row_46 :hover {color:#f00}
+#row_47 :hover {color:#f00}
+#row_48 :hover {color:#f00}
+#row_49 :hover {color:#f00}
+#row_50 :hover {color:#f00}
+#row_51 :hover {color:#f00}
+#row_52 :hover {color:#f00}
+#row_53 :hover {color:#f00}
+#row_54 :hover {color:#f00}
+#row_55 :hover {color:#f00}
+#row_56 :hover {color:#f00}
+#row_57 :hover {color:#f00}
+#row_58 :hover {color:#f00}
+#row_59 :hover {color:#f00}
+#row_60 :hover {color:#f00}
+#row_61 :hover {color:#f00}
+#row_62 :hover {color:#f00}
+#row_63 :hover {color:#f00}
+#row_64 :hover {color:#f00}
+#row_65 :hover {color:#f00}
+#row_66 :hover {color:#f00}
+#row_67 :hover {color:#f00}
+#row_68 :hover {color:#f00}
+#row_69 :hover {color:#f00}
+#row_70 :hover {color:#f00}
+#row_71 :hover {color:#f00}
+#row_72 :hover {color:#f00}
+#row_73 :hover {color:#f00}
+#row_74 :hover {color:#f00}
+#row_75 :hover {color:#f00}
+#row_76 :hover {color:#f00}
+#row_77 :hover {color:#f00}
+#row_78 :hover {color:#f00}
+#row_79 :hover {color:#f00}
+#row_80 :hover {color:#f00}
+#row_81 :hover {color:#f00}
+#row_82 :hover {color:#f00}
+#row_83 :hover {color:#f00}
+#row_84 :hover {color:#f00}
+#row_85 :hover {color:#f00}
+#row_86 :hover {color:#f00}
+#row_87 :hover {color:#f00}
+#row_88 :hover {color:#f00}
+#row_89 :hover {color:#f00}
+#row_90 :hover {color:#f00}
+#row_91 :hover {color:#f00}
+#row_92 :hover {color:#f00}
+#row_93 :hover {color:#f00}
+#row_94 :hover {color:#f00}
+#row_95 :hover {color:#f00}
+#row_96 :hover {color:#f00}
+#row_97 :hover {color:#f00}
+#row_98 :hover {color:#f00}
+#row_99 :hover {color:#f00}
+#row_100 :hover {color:#f00}
 
 .li_col1{width:20%; height:28px}
 .li_col2{width:25%; height:28px}
