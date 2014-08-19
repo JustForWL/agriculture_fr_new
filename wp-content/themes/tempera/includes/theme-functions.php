@@ -156,7 +156,7 @@ function tempera_set_social_icons($idd) {
 	}
 	echo '<div class="socials" id="'.$idd.'">';
 	echo '<a  target="_blank" rel="nofollow" href="#" class="socialicons social-YouTube" title="新浪微博"><img alt="新浪微博" src="http://localhost/agriculture_fr/wp-content/themes/tempera/images/socials/xinlangweibo.png"/></a>';
-	echo '<a  target="_blank" rel="nofollow" href="http://wordpress.local/weichat" class="socialicons social-YouTube" title="微信"><img alt="微信" src="http://localhost/agriculture_fr/wp-content/themes/tempera/images/socials/tengxunweibo.png"/></a>';
+	echo '<a  target="_blank" rel="nofollow" href="/weichat" class="socialicons social-YouTube" title="微信"><img alt="微信" src="http://localhost/agriculture_fr/wp-content/themes/tempera/images/socials/tengxunweibo.png"/></a>';
 	
 	/*
 	for ($i=1; $i<=9; $i+=2) {
