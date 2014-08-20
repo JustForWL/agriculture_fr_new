@@ -45,8 +45,13 @@ $total_posts = $post_list->found_posts;
         <?php while ( $post_list->have_posts() ) : $post_list->the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
            <div class="entry-summary">
-			  <?php //tempera_set_featured_thumb(); ?>
-			  <?php the_excerpt(); ?>
+		    <div class="featuredimg"><?php tempera_set_featured_thumb(); ?></div>
+			<div class="excerpt">
+		    <div class="excerpttitle"> <?php the_title(); ?></div>
+			<div class="excerptauthor"> <?php the_author(); ?>
+			  <?php echo esc_html( get_the_date() ); ?></div>
+			 
+			  <?php the_excerpt(); ?></div>
 			</div><!-- .entry-summary -->
 		<div style="height:5px;"></div>
 		</article>

@@ -2586,9 +2586,9 @@ a.nivo-imageLink  {
 /* Continue Reading Links */
 
 a.continue-reading-link {
-display:inline-block;
+display:block;
 position:relative;
-width:auto;
+width:18%;
 float:none;
 padding:7px 8px 5px 15px;
 border-bottom:2px solid transparent;
