@@ -34,6 +34,9 @@ $colPadding = 30;
 $contentSize = $contentSize - 60;
 
 ?>
+.news2 {display:inline;margin-left:60%;float:left;margin-top:-30px;}
+.talk {display:inline;float:left;margin-left:65%;margin-top:-30px;}
+.shijian {display:inline;float:left;margin-left:70%;margin-top:-30px;}
 .entry-summary p {color:rgb(180,180,180); font-size:16px; margin-top:6px;}
 .excerptauthor {color:rgb(180,180,180); font-size:15px;margin-top:4px;}
 .excerpttitle {color:rgb(209,0,36);font-size:18px;}
@@ -173,7 +176,7 @@ BORDER-BOTTOM-STYLE: dashed; BORDER-LEFT-STYLE:dashed; BORDER-RIGHT-STYLE: dashe
 }
 .news {margin-top:40px;margin-left:-10%;}
 .b4 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; float: left; margin-left: 70%; margin-top: 0; position: relative;}
-.headersearch2 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; margin-left: 15%; margin-top: 0; position: relative;}
+.headersearch2 {width: auto; display: inline-block; clear: none; padding: 5px 0px 8px 0; margin-left: 10%; margin-top: 0; position: relative;}
 .b3 {margin-left:50px;}
 .pr1 {height:40px;}
 .col{margin-left:2%;}

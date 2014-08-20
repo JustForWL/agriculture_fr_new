@@ -26,7 +26,7 @@ get_header();?>
 
 					<div class="entry-content">
 						<?php 
-						if(in_category(array('news'))){
+						if(in_category(array('news','talk','event'))){
 							if(is_user_logged_in()){
 								the_content();
 							}else{
