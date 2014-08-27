@@ -32,11 +32,11 @@
 		<div class="cleanlogin-form-bottom">
 			
 			<?php if ( $register_url != '' )
-				echo "<a href='http://www.faguoshipin.com/register' class='cleanlogin-form-register-link'>". __( '免费注册', 'cleanlogin' ) ."</a>";
+				echo "<a href='/register' class='cleanlogin-form-register-link'>". __( '免费注册', 'cleanlogin' ) ."</a>";
 			?>
          
 			<?php if ( $restore_url != '' )
-				echo "<a href='http://www.faguoshipin.com/lostpassword' class='cleanlogin-form-pwd-link'>". __( '忘记密码', 'cleanlogin' ) ."</a>";
+				echo "<a href='/lostpassword' class='cleanlogin-form-pwd-link'>". __( '忘记密码', 'cleanlogin' ) ."</a>";
 			?>
 						
 		</div>
