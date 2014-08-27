@@ -37,7 +37,7 @@ $total_posts = $post_list->found_posts;
 <div id="frontpage" >
 <div id="pp-afterslider">
 <div style="padding-left: 10%; padding-top: 5%;">
-<div class="b1"><img style="display: inline;" src="images/picture60.png" alt="" /><div class="headersearch2"><?php get_search_form(); ?></div><div class="news2"><a href="/shownews"><img src="images/picture61_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="talk"><a href="/talk"><img src="images/picture62_1.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="shijian"><a href="/event"><img src="images/picture63_2.png"></a></div></div>
+<div class="b1"><img style="display: inline;" src="/images/picture60.png" alt="" /><div class="headersearch2"><?php get_search_form(); ?></div><div class="news2"><a href="/shownews"><img src="/images/picture61_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="talk"><a href="/talk"><img src="/images/picture62_1.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="shijian"><a href="/event"><img src="/images/picture63_2.png"></a></div></div>
 
 <div class="news">
 <?php if ( $post_list->have_posts() ) : ?>
