@@ -128,7 +128,7 @@ if(!empty($_POST['canSubmit'])){
 	        <ul style="list-style:none;height:85px;">
                     
                     <li style="display:inline;float:none"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="images/picture133.png"/></a></li>&nbsp;
-                    <li style="display:inline;margin-top:-25px;float:none"><a href="http://wordpress.local" target=""><img src="images/picture132.png" /></a></li>
+                    <li style="display:inline;margin-top:-25px;float:none"><a href="/" target=""><img src="images/picture132.png" /></a></li>
                     
                 </ul>
           
@@ -139,9 +139,9 @@ if(!empty($_POST['canSubmit'])){
          </div> <!-- #frontpage -->
 
 	<?php }else{
-		header("Location:http://wordpress.local");
+		header("Location:/");
 	}
 }else{
-	header("Location:http://wordpress.local");
+	header("Location:/");
 }
 ?>

@@ -1,5 +1,5 @@
 <?php include("conn.php"); ?>
-<?php if(!is_user_logged_in()) header("Location:http://wordpress.local");?>
+<?php if(!is_user_logged_in()) header("Location:/");?>
 <?php 
     global $current_user;
 	$result = mysql_query("select * from userinfo where username='".$current_user->user_login."';");

@@ -190,7 +190,7 @@ body { max-width:1366px;}
 .rollBox {display:block;height:220px;margin-top:10px;margin-left:-4%;}
 .rollBox .scrollcon{width:1140px;height:200px;position:absolute;}
 .rollBox .LeftBotton{height:30px;width:22px;background:url(images/picture16_1.png); no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-top:80px;cursor:pointer;margin-left:10%;}
-.rollBox .LeftBotton2{height:30px;width:22px;background:url(http://localhost/agriculture_fr/images/picture16_1.png) no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-top:80px;cursor:pointer;margin-left:40px;}
+.rollBox .LeftBotton2{height:30px;width:22px;background:url(/images/picture16_1.png) no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-top:80px;cursor:pointer;margin-left:40px;}
 .rollBox .RightBotton{height:30px;width:22px;background:url(images/picture15_1.png); no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-left:1140px;cursor:pointer;margin-top:-130px;}
 .rollBox .RightBotton2{height:30px;width:22px;background:url(images/picture15_1.png); no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-left:1140px;cursor:pointer;margin-top:-130px;}
 .rollBox .Cont{width:auto;overflow:hidden;height:200px;margin-left:22px;margin-top:0;}
@@ -215,7 +215,7 @@ body { max-width:1366px;}
 #focus .btn{position:absolute;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
 #focus .btn span{display:inline-block;_display:inline;_zoom:1;width:25px;height:10px;_font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
 #focus .btn span.on{background:#fff;}
-#focus .preNext{width:45px;height:100px;position:absolute;top:90px;background:url(http://wordpress.local/wp-content/themes/tempera/images/slider/sprite.png) no-repeat 0 0;cursor:pointer;}
+#focus .preNext{width:45px;height:100px;position:absolute;top:90px;background:url(/wp-content/themes/tempera/images/slider/sprite.png) no-repeat 0 0;cursor:pointer;}
 #focus .pre{left:0;}
 #focus .next{right:0;background-position:right top;}
 #popmenu {
