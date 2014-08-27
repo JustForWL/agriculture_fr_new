@@ -42,6 +42,7 @@ $contentSize = $contentSize - 60;
 .excerpttitle {color:rgb(209,0,36);font-size:18px;}
 .excerpt {margin-left:20%;margin-top:-18%; float:left;}
 .featuredimg {width:180px; height:180px;float:left;}
+
 #done2 {cursor:pointer;}
 .login { background-color:#FFF;max-width:1000px;margin-left:15%;margin-top:-8px;}
 .selectedone {background:url('images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}

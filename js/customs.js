@@ -185,7 +185,7 @@ $(document).ready(function(){
 		document.getElementById("tishi13").innerHTML='';
 	}
 	);
-	
+	$("div .featuredimg").find("img").css("borderColor", "#fff");
 	var other1 = document.getElementById('other1');
 	if(other1){
 	    if(other1.value!='')
