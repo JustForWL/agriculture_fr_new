@@ -41,7 +41,7 @@ $total_posts = $post_list->found_posts;
 
 <div class="news">
 <?php if ( $post_list->have_posts() ) : ?>
-    
+
         <?php while ( $post_list->have_posts() ) : $post_list->the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
            <div class="entry-summary">
@@ -50,20 +50,22 @@ $total_posts = $post_list->found_posts;
 		    <div class="excerpttitle"> <?php the_title(); ?></div>
 			<div class="excerptauthor"> <?php the_author(); ?>
 			  <?php echo esc_html( get_the_date() ); ?></div>
-			 
-			  <?php the_excerpt(); ?></div>
+			 <p>
+			  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 350,"<br/>……"); ?></p>
+			  <div class="excerpt2"><a href="<?php echo get_permalink(); ?>">点击阅读</a></div>
+			  </div>
 			</div><!-- .entry-summary -->
 		<div style="height:5px;"></div>
 		</article>
         <?php endwhile; ?>
-        
+
         <!-- 用wp_pagenavi插件分页 -->
 		<div class="page_navigation" align="center">
         <?php if ( function_exists('wp_pagenavi') ) wp_pagenavi( array('query' => $post_list) );  ?>
         </div>
 <?php endif; ?>
-      
-</div>	
+
+</div>
 </div>
 </div>
 </div>

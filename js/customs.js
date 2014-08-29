@@ -51,6 +51,7 @@ $(function(){
 	});
 });
 $(document).ready(function(){
+   // alert($("div .excerpt2").find("p").find());
 	var notification = document.getElementById('notification');
 	if(notification){
 		document.getElementById("cleanlogin").style.marginTop="-32%";

@@ -208,9 +208,9 @@ body { max-width:1366px;}
 .divcss5:hover a.now{cursor:pointer; position:absolute; top:0; width:100%; height:100%; z-index:100; left:0; display:block;}
 .divcss5:hover a img{ display:block;position:absolute; bottom:0; left:0;color:#FFF;width:554px; z-index:10;height:36px; line-height:36px; background:#efefee;filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;}
 #focus ul li {list-style:none;}
-#focus{height:340px;overflow:hidden;position:relative;width:1366px;margin-top:-5px; }
-#focus ul{height:340px;position:absolute;width:1366px;}
-#focus ul li{float:left;height:340px;width:1366px;overflow:hidden;position:relative;background:#000;}
+#focus{height:340px;overflow:hidden;position:relative;width:1350px;margin-top:-5px; }
+#focus ul{height:340px;position:absolute;width:1350px;}
+#focus ul li{float:left;height:340px;width:1350px;overflow:hidden;position:relative;background:#000;}
 #focus ul li div{position:absolute;overflow:hidden;}
 #focus .btnBg{position:absolute;height:20px;left:0;bottom:0;background:#000;}
 #focus .btn{position:absolute;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
@@ -303,7 +303,7 @@ body { font-family: <?php echo ((!$tempera_googlefont)?$tempera_fontfamily:"\"$t
 .leftimg {margin-left:10%;}
 .topimg {float:left;margin-left:50%;margin-top:-35%;}
 #footer {}
-body { color: <?php echo $tempera_contentcolortxt; ?>; background-color: <?php echo $tempera_backcolormain; ?> }
+body { color: <?php echo $tempera_contentcolortxt; ?>; background-color: #000; }
 a { color: <?php echo $tempera_linkcolortext; ?>; }
 a:hover,.entry-meta span a:hover, .comments-link a:hover { color: <?php echo $tempera_linkcolorhover; ?>; }
 #header { background-color: <?php echo $tempera_backcolorheader; ?>; }

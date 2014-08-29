@@ -59,10 +59,10 @@
 <div style="clear:both;height:0;"> </div>
 <div id="focus">
 		<ul>
-			<li><a href="#" target="_blank"><img src="http://www.faguoshipin.com/wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="http://www.faguoshipin.com/wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="http://www.faguoshipin.com/wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
-			<li><a href="#" target="_blank"><img src="http://www.faguoshipin.com/wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
+			<li><a href="#" target="_blank"><img src="/wp-content/themes/tempera/images/slider/tempera-slide1.jpg" alt="" /></a></li>
+			<li><a href="#" target="_blank"><img src="/wp-content/themes/tempera/images/slider/tempera-slide2.jpg" alt="" /></a></li>
+			<li><a href="#" target="_blank"><img src="/wp-content/themes/tempera/images/slider/tempera-slide3.jpg" alt="" /></a></li>
+			<li><a href="#" target="_blank"><img src="/wp-content/themes/tempera/images/slider/tempera-slide4.jpg" alt="" /></a></li>
 		</ul>
 </div>
 

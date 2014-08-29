@@ -7,22 +7,22 @@
  * @since Tempera 1.1
  */
 $order_by = 'comment_count';
-/** ÉýÐò»¹ÊÇ½µÐò£¬DESC±íÊ¾½µÐò£¬ASC±íÊ¾ÉýÐò */
+/** å‡åºè¿˜æ˜¯é™åºï¼ŒDESCè¡¨ç¤ºé™åºï¼ŒASCè¡¨ç¤ºå‡åº */
 $order = 'DESC';
-/** Ã¿Ò³ÏÔÊ¾¶àÉÙÆªÎÄÕÂ */
+/** æ¯é¡µæ˜¾ç¤ºå¤šå°‘ç¯‡æ–‡ï¿½?*/
 $posts_per_page = 4;
 /**
- * Ö»ÏÔÊ¾»ò²»ÏÔÊ¾Ä³Ð©Ä¿Â¼ÏÂµÄÎÄÕÂ,Ä¿Â¼IDÓÃ¶ººÅ·Ö¸ô£¬ÅÅ³ýÄ¿Â¼Ç°Ãæ¼Ó-
- * ÀýÈçÅÅ³ýÄ¿Â¼29ºÍ30ÏÂµÄÎÄÕÂ, $cat = '-29,-30';
- * Ö»ÏÔÊ¾Ä¿Â¼29ºÍ30ÏÂµÄÎÄÕÂ, $cat = '29, 30';
+ * åªæ˜¾ç¤ºæˆ–ä¸æ˜¾ç¤ºæŸäº›ç›®å½•ä¸‹çš„æ–‡ï¿½?ç›®å½•IDç”¨é€—å·åˆ†éš”ï¼ŒæŽ’é™¤ç›®å½•å‰é¢åŠ -
+ * ä¾‹å¦‚æŽ’é™¤ç›®å½•29ï¿½?0ä¸‹çš„æ–‡ç« , $cat = '-29,-30';
+ * åªæ˜¾ç¤ºç›®ï¿½?9ï¿½?0ä¸‹çš„æ–‡ç« , $cat = '29, 30';
  */
 $cat = '7';
-/** »ñÈ¡¸ÃÒ³ÃæµÄ±êÌâºÍÄÚÈÝ */
+/** èŽ·å–è¯¥é¡µé¢çš„æ ‡é¢˜å’Œå†…ï¿½?*/
 global $post;
 $post_title = $post->post_title;
 $post_content = apply_filters('the_content', $post->post_content);
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-/** ÓÃWP_Query»ñÈ¡posts */
+/** ç”¨WP_QueryèŽ·å–posts */
 $post_list = new WP_Query(
     "posts_per_page=" . $posts_per_page .
     "&orderby=" . $order_by .
@@ -37,7 +37,7 @@ $total_posts = $post_list->found_posts;
 <div id="frontpage" >
 <div id="pp-afterslider">
 <div style="padding-left: 10%; padding-top: 5%;">
-<div class="b1"><img style="display: inline;" src="/images/picture60.png" alt="" /><div class="headersearch2"><?php get_search_form(); ?></div><div class="news2"><a href="/shownews"><img src="images/picture61_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="talk"><a href="/talk"><img src="images/picture62_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="shijian"><a href="/event"><img src="images/picture63_1.png"></a></div></div>
+<div class="b1"><img style="display: inline;" src="/images/picture60.png" alt="" /><div class="headersearch2"><?php get_search_form(); ?></div><div class="news2"><a href="/shownews"><img src="/images/picture61_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="talk"><a href="/talk"><img src="/images/picture62_2.png"></a>&nbsp;&nbsp;&nbsp;|</div><div class="shijian"><a href="/event"><img src="/images/picture63_1.png"></a></div></div>
 
 <div class="news">
 <?php if ( $post_list->have_posts() ) : ?>
@@ -50,14 +50,16 @@ $total_posts = $post_list->found_posts;
 		    <div class="excerpttitle"> <?php the_title(); ?></div>
 			<div class="excerptauthor"> <?php the_author(); ?>
 			  <?php echo esc_html( get_the_date() ); ?></div>
-			 
-			  <?php the_excerpt(); ?></div>
+			 <p>
+			  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 350,"<br/>......"); ?></p>
+			  <div class="excerpt2"><a href="<?php echo get_permalink(); ?>">ç‚¹å‡»é˜…è¯»</a></div>
+			  </div>
 			</div><!-- .entry-summary -->
 		<div style="height:5px;"></div>
 		</article>
         <?php endwhile; ?>
         
-        <!-- ÓÃwp_pagenavi²å¼þ·ÖÒ³ -->
+        <!-- ç”¨wp_pagenaviæ’ä»¶åˆ†é¡µ -->
 		<div class="page_navigation" align="center">
         <?php if ( function_exists('wp_pagenavi') ) wp_pagenavi( array('query' => $post_list) );  ?>
         </div>

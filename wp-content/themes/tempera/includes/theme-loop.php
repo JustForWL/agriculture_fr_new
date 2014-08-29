@@ -117,7 +117,8 @@ function tempera_trim_excerpt($text) {
          if ( count($words) > $tempera_excerptwords ) {
              array_pop($words);
              $text = implode(' ', $words);
-             $text = $text .' '.$tempera_excerptdots. ' <a class="continue-reading-link" href="'. get_permalink() . '">' .$tempera_excerptcont.' <span class="meta-nav">&rarr; </span>' . '</a>';
+             //$text = $text .' '.$tempera_excerptdots. ' <a class="continue-reading-link" href="'. get_permalink() . '">' .$tempera_excerptcont.' <span class="meta-nav">&rarr; </span>' . '</a>';
+			 $text = ' <a class="continue-reading-link" href="'. get_permalink() . '">' .$tempera_excerptcont.' <span class="meta-nav">&rarr; </span>' . '</a>';
          } else {
              $text = implode(' ', $words);
          }
