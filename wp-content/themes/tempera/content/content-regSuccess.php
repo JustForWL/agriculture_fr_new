@@ -82,12 +82,12 @@ if(!empty($_POST['canSubmit'])){
             <div style="margin-left:10%;"><img src="images/picture136.png" /></div>
            
             <div style="margin-top:-30%;float:left;margin-left:48%;"></span><img src="images/picture135.png" /></div>
-            <div style="margin-top:-20%;float:left;margin-left:48%;"><img src="images/picture134.png" /></div>
+            <div style="margin-top:-20%;float:left;margin-left:48%;"><img src="/images/picture134.png" /></div>
             <div style="margin-top:-10%;float:left;;margin-left:48%;">
 	        <ul style="list-style:none;height:85px;">
                     
-                    <li style="display:inline;float:none"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="images/picture133.png"/></a></li>&nbsp;
-                    <li style="display:inline;margin-top:-25px;float:none"><a href="/" target=""><img src="images/picture132.png" /></a></li>
+                    <li style="display:inline;float:none"><a href="javascript:window.opener=null;window.open('','_self');window.close();"><img src="/images/picture133.png"/></a></li>&nbsp;
+                    <li style="display:inline;margin-top:-25px;float:none"><a href="/" target=""><img src="/images/picture132.png" /></a></li>
                     
                 </ul>
           

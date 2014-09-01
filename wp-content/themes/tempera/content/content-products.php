@@ -3,29 +3,29 @@
 <div id="pp-afterslider">
 <div class="b2">
      <div>&nbsp;</div>
-     <div class="pr1"><img src="images/discover/picture1.png"></div>
+     <div class="pr1"><img src="/images/discover/picture1.png"></div>
       <div class="b3">            
-                            <img src="images/discover/1-fsd.jpg" alt="" width="220" height="450" usemap="#Map11"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img src="images/discover/2_FSG.jpg" alt="" width="220" height="450" usemap="#Map12"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img src="images/discover/3_ffv.jpg" alt="" width="220" height="450" usemap="#Map13"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img src="images/discover/4_fsg.jpg" alt="" width="220" height="450" usemap="#Map14"/>
+                            <img src="/images/discover/1-fsd.jpg" alt="" width="220" height="450" usemap="#Map11"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img src="/images/discover/2_FSG.jpg" alt="" width="220" height="450" usemap="#Map12"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img src="/images/discover/3_ffv.jpg" alt="" width="220" height="450" usemap="#Map13"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img src="/images/discover/4_fsg.jpg" alt="" width="220" height="450" usemap="#Map14"/>
                          
         </div>
         <div class="b3">
-                           <img src="images/discover/5-fdp.jpg" alt="" width="220" height="450" usemap="#Map16"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                           <img src="/images/discover/5-fdp.jpg" alt="" width="220" height="450" usemap="#Map16"/>&nbsp;&nbsp;&nbsp;&nbsp;
                               <map name="Map16">
                                 <area shape="rect" coords="60,398,160,424" href="/pdf/半成品和方便食品.pdf">
                             </map>
-                            <img src="images/discover/6-fcp.jpg" alt="" width="220" height="450" usemap="#Map15"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                           <img src="images/discover/7_fdp.jpg" alt="" width="221" height="450" usemap="#Map17"/>&nbsp;&nbsp;&nbsp;&nbsp;
-                            <img src="images/discover/8-fws.jpg" alt="" width="220" height="450" usemap="#Map18"/>
+                            <img src="/images/discover/6-fcp.jpg" alt="" width="220" height="450" usemap="#Map15"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                           <img src="/images/discover/7_fdp.jpg" alt="" width="221" height="450" usemap="#Map17"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <img src="/images/discover/8-fws.jpg" alt="" width="220" height="450" usemap="#Map18"/>
           </div>
           <div  class="b3">
-                         <img src="images/discover/9_fmm.jpg" alt="" width="220" height="450" usemap="#Map19"/>&nbsp;&nbsp;&nbsp;&nbsp;
+                         <img src="/images/discover/9_fmm.jpg" alt="" width="220" height="450" usemap="#Map19"/>&nbsp;&nbsp;&nbsp;&nbsp;
                               <map name="Map19">
                                 <area shape="rect" coords="59,396,161,424" href="/pdf/肉制品.pdf">
                             </map>
-                            <img src="images/discover/10-fs.jpg" alt="" width="220" height="450" usemap="#Map20"/>
+                            <img src="/images/discover/10-fs.jpg" alt="" width="220" height="450" usemap="#Map20"/>
                     
                </div>
   </div>

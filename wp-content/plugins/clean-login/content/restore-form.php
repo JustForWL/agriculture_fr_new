@@ -4,7 +4,7 @@
 		<fieldset>
 		
 			<div class="cleanlogin-field">
-				<img src="images/picture37.png">&nbsp;&nbsp;<input class="cleanlogin-field-username" type="text" name="username" value="" placeholder="<?php echo __( 'Username', 'cleanlogin' ); ?>">
+				<img src="/images/picture37.png">&nbsp;&nbsp;<input class="cleanlogin-field-username" type="text" name="username" value="" placeholder="<?php echo __( 'Username', 'cleanlogin' ); ?>">
 			</div>
 
 			<div class="cleanlogin-field-website">
@@ -16,7 +16,7 @@
 		
 		<div>	
 			<!--<input type="submit" value="<?php echo __( 'Restore password', 'cleanlogin' ); ?>" name="submit">-->
-			<input type="image" src="images/picture145.png" onclick="document.resetpass.submit();" style="margin-left:23%;">
+			<input type="image" src="/images/picture145.png" onclick="document.resetpass.submit();" style="margin-left:23%;">
 			<input type="hidden" name="action" value="restore">		
 		</div>
 
