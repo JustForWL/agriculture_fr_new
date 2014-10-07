@@ -8,11 +8,11 @@
 			
 		<fieldset>
 			<div class="cleanlogin-field">
-				<img src="images/picture29.png">&nbsp;&nbsp;<input class="cleanlogin-field-username" type="text" name="log" placeholder="<?php echo __( 'Username', 'cleanlogin' ); ?>">
+				<img src="/images/picture29.png">&nbsp;&nbsp;<input class="cleanlogin-field-username" type="text" name="log" placeholder="<?php echo __( 'Username', 'cleanlogin' ); ?>">
 			</div>
 			
 			<div class="cleanlogin-field">
-				<img src="images/picture28.png" style="margin-left:5%;">&nbsp;&nbsp;<input class="cleanlogin-field-password" type="password" name="pwd" placeholder="<?php echo __( 'Password', 'cleanlogin' ); ?>">
+				<img src="/images/picture28.png" style="margin-left:5%;">&nbsp;&nbsp;<input class="cleanlogin-field-password" type="password" name="pwd" placeholder="<?php echo __( 'Password', 'cleanlogin' ); ?>">
 			</div>
 		</fieldset>
 		
@@ -20,7 +20,7 @@
         <!--
 			<input class="cleanlogin-field" type="submit" value="<?php echo __( 'Log in', 'cleanlogin' ); ?>" name="submit">
            -->
-            <input type="image" src="images/picture30.png" onclick="document.cleanlogin.submit();" style="margin-left:30%;">
+            <input type="image" src="/images/picture30.png" onclick="document.cleanlogin.submit();" style="margin-left:30%;">
 			<input type="hidden" name="action" value="login">
 			
 			<!--<div class="cleanlogin-field cleanlogin-field-remember">

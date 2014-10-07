@@ -5,7 +5,7 @@
 <div style="padding-left:10%;padding-top:5%;">
 
                 <div id="QR_code" >
-                <img src="images/QR_CODE.jpg" width="1000" height="478" alt=""/> </div>
+                <img src="/images/QR_CODE.jpg" width="1000" height="478" alt=""/> </div>
 
  
 </div>
