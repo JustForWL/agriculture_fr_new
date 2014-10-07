@@ -1,6 +1,7 @@
 	/* =Responsive Structure 
 	----------------------------------------------- */ 
 
+
 @media (max-width: 1920px) { 
 	body.mobile {-webkit-text-size-adjust: 100%;} /* Iphone browser fix*/ 
 	body.mobile #forbottom {min-height:0;}
@@ -11,7 +12,6 @@
 	body.mobile .columnmore {position:relative;bottom:0;}
 	body.mobile .column-image:hover .columnmore {bottom:0;}
 } 
-	
 	
 @media (max-width: 800px) {
 	/* Column text and Readmore button visible on mobile devices */
@@ -126,14 +126,14 @@
 	
 	#main {margin-top:0px;}	
 	#nav-toggle { display: block; float: left; margin: 0 auto; cursor:pointer;
-				  width: 94%; height: 40px; padding: 2px 4%; }
+				  /*width: 94%;*/ height: 40px; padding: 2px 4%; }
 	#nav-toggle span { }
 	#nav-toggle span:before { content: "\e820"; font-family: "elusive"; font-size: 16px; height: 40px; line-height: 40px; }
 	#access { display: none; margin-top: 0; padding-bottom: 5px; }
-	#access .menu ul, #access .menu ul li { width: 100%; }
+	#access .menu ul, #access .menu ul li { /*width: 100%;*/ }
 	#access > .menu li ul { position: inherit; margin-top: 0 !important; }
 	#access > .menu ul ul ul { width: 95%; left: 5%; }
-	#access > .menu > ul > li > a > span { border-width: 0 0 1px 0; border-style: solid; box-shadow: 0 1px 0 rgba(255,255,255,0.5);}	
+	#access > .menu > ul > li > a > span { border-width: 0 0 1px 0; /*border-style: solid;*/ box-shadow: 0 1px 0 rgba(255,255,255,0.5);}	
 	#access > .menu ul li > a:not(:only-child) span:after {
 	font-family:"Elusive"; content: '\e80a';
     position: absolute; right: 5px; top: 10px; z-index: 251;

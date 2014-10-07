@@ -62,7 +62,7 @@ if( isset($_POST['ludou_token']) && ($_POST['ludou_token'] == $_SESSION['ludou_t
     }
     else {
       unset($_SESSION['ludou_token']);
-      wp_safe_redirect("http://localhost/agriculture_fr");
+      wp_safe_redirect("http://http://agriculture.sinaapp.com/");
     }
   }
 

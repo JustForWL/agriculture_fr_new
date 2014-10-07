@@ -193,6 +193,6 @@ function Dvbbs_ViewCode(replyid)
 	//preWin.document.title="查看贴子内容";
 	preWin.document.charset="UTF-8";
 }
-var other='<table width="80" cellspacing="2"><tr><td bgcolor="#000000"  style="text-align:center"><a href="#" style="color:#7F7F7F;">Germany</a></td></tr><tr><td bgcolor="#000000" style="text-align:center;"><a href="#" style="color:#7F7F7F;">Français</a></td></tr></table>'
+var other='<table width="80" cellspacing="2"><tr><td bgcolor="#000000" style="text-align:center;"><a href="http://www.frenchfoodandbeverages.com/fr" style="color:#7F7F7F;">Français</a></td></tr><tr><td bgcolor="#000000"  style="text-align:center"><a href="http://www.france-bonappetit.de/" style="color:#7F7F7F;">Germany</a></td></tr><tr><td bgcolor="#000000"  style="text-align:center"><a href="http://www.frenchfoodandbeverages.com/" style="color:#7F7F7F;">English</a></td></tr></table>'
 
 

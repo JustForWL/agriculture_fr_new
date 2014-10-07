@@ -24,19 +24,7 @@ get_header(); ?>
 			
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header">
-					<h1 class="page-title">
-						<?php if ( is_day() ) : ?>
-							<?php printf( __( 'Daily Archives: %s', 'tempera' ), '<span>' . get_the_date() . '</span>' ); ?>
-						<?php elseif ( is_month() ) : ?>
-							<?php printf( __( 'Monthly Archives: %s', 'tempera' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'tempera' ) ) . '</span>' ); ?>
-						<?php elseif ( is_year() ) : ?>
-							<?php printf( __( 'Yearly Archives: %s', 'tempera' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'tempera' ) ) . '</span>' ); ?>
-						<?php else : ?>
-							<?php _e( 'Blog Archives', 'tempera' ); ?>
-						<?php endif; ?>
-					</h1>
-				</header>
+			
 
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>

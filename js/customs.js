@@ -21,11 +21,40 @@ catch (e)
 return xmlHttp;
 }
 var xmlHttp;
-var canSubmit = true;
+canSubmit1 = true;
+canSubmit2 = true;
 $(function(){
+   $("body").click(function(e){
+		var yourDiv = document.getElementById('HMF-1');
+		var yourDiv2 = document.getElementById("showHMF1");
+		var yourDiv3 = document.getElementById('productsType');
+		if(yourDiv && yourDiv2 && yourDiv3){
+			e = e || window.event;
+			var target = e.target || e.srcElement;
+			if(target != (yourDiv && yourDiv2 && yourDiv3)){
+				 if(yourDiv.style.display != "none") yourDiv.style.display="none";
+				 else ;
+			  }
+		  }
+   });
+      $("body").click(function(e){
+		var yourDiv = document.getElementById('HMF-2');
+		var yourDiv2 = document.getElementById("showHMF2");
+		var yourDiv3 = document.getElementById('country');
+		if(yourDiv && yourDiv2 && yourDiv3){
+			e = e || window.event;
+			var target = e.target || e.srcElement;
+			if(target != (yourDiv && yourDiv2 && yourDiv3)){
+				 if(yourDiv.style.display != "none") yourDiv.style.display="none";
+				 else ;
+			  }
+		  }
+   });
+   
+   $("#widget_sp_image-5").find("img").attr("src", "/wp-content/uploads/2014/07/picture83.png");
     var show_ajax = document.getElementById("show_ajax");
 	if(show_ajax) {
-		if(0 == show_ajax.style.height) show_ajax.style.height = "2500px";
+		//if(0 == show_ajax.style.height) show_ajax.style.height = "100px";
 	}
 	$("input[name='hangye']").each(function(){
 		if($(this).val() == '7'){
@@ -61,10 +90,10 @@ $(document).ready(function(){
 	}
 	);
 	$("input[name = 'search']").click(function(){
-	    show_ajax.style.height = "auto";
+	    //show_ajax.style.height = "auto";
 		$.ajax({
 			type:'POST',
-			url:'companyQuery.php',
+			url:'/companyQuery.php',
 			data:{productsType:$("input[name='productsType']").val(), country:$("input[name='country']").val(), company:$("input[name='company']").val(), order:'name'},
 			dataType:'text',
 			success:function(data){
@@ -76,11 +105,12 @@ $(document).ready(function(){
 
 		//this is for the order by name
 	$("#col1").click(function(){
+	    
 		var pageID = $("#pageID").val();
-		//document.getElementById('show_ajax').innerHTML = '';
+		if(document.getElementById('ajax')){
 		$.ajax({
 			type:'POST',
-			url:'companyQuery.php',
+			url:'/companyQuery.php',
 			data:{productsType:$("input[name='productsType']").val(), country:$("input[name='country']").val(), company:$("input[name='company']").val(), order:'name', page:pageID},
 			dataType:'text',
 			success:function(data){
@@ -88,14 +118,14 @@ $(document).ready(function(){
 			}
 			});
 		
-		});
+		}});
 		//this is for the order by products	
 	$("#col2").click(function(){
 		var pageID = $("#pageID").val();
-		//document.getElementById('show_ajax').innerHTML = '';
+		if(document.getElementById('ajax')){
 		$.ajax({
 			type:'POST',
-			url:'companyQuery.php',
+			url:'/companyQuery.php',
 			data:{productsType:$("input[name='productsType']").val(), 'country':$("input[name='country']").val(), 'company':$("input[name='company']").val(), order:'products',page:pageID},
 			dataType:'text',
 			success:function(data){
@@ -103,14 +133,14 @@ $(document).ready(function(){
 			}
 			});
 		
-		});
+		}});
 				//this is for the order by exportation_countries
 	$("#col3").click(function(){
 		var pageID = $("#pageID").val();
-	    //document.getElementById('show_ajax').innerHTML = '';
+	    if(document.getElementById('ajax')){
 		$.ajax({
 			type:'POST',
-			url:'companyQuery.php',
+			url:'/companyQuery.php',
 			data:{productsType:$("input[name='productsType']").val(), 'country':$("input[name='country']").val(), 'company':$("input[name='company']").val(), order:'exportation_countries',page:pageID},
 			dataType:'text',
 			success:function(data){
@@ -118,24 +148,50 @@ $(document).ready(function(){
 			}
 			});
 		
-		});
+		}});
 	
 	$("input[name='user']").blur(function(){
+	    window.canSubmit1 = true;
 		if($("input[name='user']").val() != ''){
 		$.ajax({
 			type:'GET',
-			url:'checkUsername.php',
+			url:'/checkUsername.php',
 			data:{username:$("input[name='user']").val()},
 			dataType:'text',
 			success:function(data){
 				
-				if(data == "registed"){
+				if(data == "registed1"){
 					document.getElementById('tishi1').innerHTML="<font color='#f00'>&nbsp;用户名已被占用</font>";
-					canSubmit = false;
-				}else{
-					//alert(data);
-					document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
-					canSummit = true;
+					window.canSubmit1 = false;
+				}
+				if(data == "unregisted1"){
+					canSummit1 = true;
+					window.document.getElementById('tishi1').innerHTML="<font color='#0f0'>&nbsp;用户名可用</font>";
+					
+				}
+			}
+			});
+		}
+	}
+	);
+	$("input[name='email']").blur(function(){
+	window.canSubmit2 = true;
+		if($("input[name='email']").val() != ''){
+		$.ajax({
+			type:'GET',
+			url:'/checkUsername.php',
+			data:{email:$("input[name='email']").val()},
+			dataType:'text',
+			success:function(data){
+				
+				if(data == "registed2"){
+					document.getElementById('tishi2').innerHTML="<font color='#f00'>&nbsp;邮箱已被占用</font>";
+					window.canSubmit2 = false;
+				}
+				if(data == "unregisted2"){
+					window.canSummit2 = true;
+					document.getElementById('tishi2').innerHTML="<font color='#0f0'>&nbsp;邮箱可用</font>";
+					
 				}
 			}
 			});
@@ -172,6 +228,14 @@ $(document).ready(function(){
 	);
 	$("input[name='secondName']").focus(function(){
 		document.getElementById("tishi8").innerHTML='';
+	}
+	);
+	$("input[name='phone']").focus(function(){
+		document.getElementById("tishi9").innerHTML='';
+	}
+	);
+	$("input[name='mobilephone']").focus(function(){
+		document.getElementById("tishi10").innerHTML='';
 	}
 	);
 	$("textarea[name='addressChinese']").focus(function(){
@@ -242,7 +306,7 @@ $(function() {
 	});
 
 	//本例为左右滚动，即所有li元素都是在同一排向左浮动，所以这里需要计算出外围ul元素的宽度
-	$("#focus ul").css("width",sWidth * (len));
+	$("#focus ul").css("width",9999999);
 	
 	//鼠标滑上焦点图时停止自动播放，滑出时开始自动播放
 	$("#focus").hover(function() {
@@ -257,7 +321,14 @@ $(function() {
 	
 	//显示图片函数，根据接收的index值显示相应的内容
 	function showPics(index) { //普通切换
-		var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
+        var nowLeft = 0;	   
+	   switch(index){
+		case 1: nowLeft = -1370; break;
+		case 2: nowLeft = -2698; break;
+		case 3: nowLeft = -4100; break;
+		default:nowLeft = 0;
+		}
+		//var nowLeft = -index*sWidth; //根据index值计算ul元素的left值
 		$("#focus ul").stop(true,false).animate({"left":nowLeft},300); //通过animate()调整ul元素滚动到计算出的position
 		//$("#focus .btn span").removeClass("on").eq(index).addClass("on"); //为当前的按钮切换到选中的效果
 		$("#focus .btn span").stop(true,false).animate({"opacity":"0.4"},300).eq(index).stop(true,false).animate({"opacity":"1"},300); //为当前的按钮切换到选中的效果
@@ -272,7 +343,7 @@ var MoveLock = false;
 var MoveTimeObj;
 var Comp = 0;
 var AutoPlayObj = null;
-GetObj("List2").innerHTML = GetObj("List1").innerHTML;
+//GetObj("List1").innerHTML;
 GetObj('ISL_Cont').scrollLeft = fill;
 GetObj("ISL_Cont").onmouseover = function(){
 	clearInterval(AutoPlayObj);
@@ -407,16 +478,18 @@ $(document).ready(function(){
 	}
 	function changeState(){
 	var done = document.getElementById("done");
-	if("images/picture55.png" == done.getAttribute("src")){
-		done.setAttribute("src", "images/picture54.png");
+	if("/images/picture55.png" == done.getAttribute("src")){
+		done.setAttribute("src", "/images/picture54.png");
+		done.style.cursor="pointer";
 		
 	}else{
-		done.setAttribute("src", "images/picture55.png");
+		done.setAttribute("src", "/images/picture55.png");
+		done.style.cursor="none";
 	}
 }
 	function updatePostContent(){
-	if(document.getElementById("updateContent").getAttribute("src") == "images/picture58.png"){
-		document.getElementById("updateContent").setAttribute("src", "images/picture66.png" );
+	if(document.getElementById("updateContent").getAttribute("src") == "/images/picture58.png"){
+		document.getElementById("updateContent").setAttribute("src", "/images/picture66.png" );
 		var inputs = document.getElementsByTagName("input");
 		for(var i = 0; i < inputs.length; i++){
 			inputs.item(i).removeAttribute("readonly");
@@ -451,32 +524,24 @@ function $$$$$(_sId){
  }
 function hide(_sId){
  if("HMF-1" == _sId) {
-	var url = "productsAndcountryQuery.php";
+	var url = "/productsAndcountryQuery.php";
 	xmlHttp = GetXmlHttpObject();
 	xmlHttp.open('POST',url,false); 
     xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
-	var str = "target='products'";
+	var target = "products";
+	var str = "target="+target;
     xmlHttp.send(str); 
 	//alert(str);
 	xmlHttp.onreadystatechange=showPro(_sId); 
  }
- if('HMF-2' == _sId) {
-	var url = "productsAndcountryQuery.php";
-	xmlHttp = GetXmlHttpObject();
-	xmlHttp.open('POST',url,false); 
-    xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
-	var str = "target='country'";
-    //alert(str);
-    xmlHttp.send(str); 
-	xmlHttp.onreadystatechange=showPro(_sId); 
- }
+
 $$$$$(_sId).style.display = $$$$$(_sId).style.display == "none" ? "" : "none";
 }
 function showPro(target){
-    //alert(document.getElementById(target));
+	//alert(xmlHttp.readyState);
 	if(xmlHttp.readyState==4){             
-          if(xmlHttp.status==200) { 
-           //alert("ok");		  
+          if(xmlHttp.status==200) { 	
+           //alert(xmlHttp.responseText);		   
            $$$$$(target).innerHTML=xmlHttp.responseText; 
           } 
      } 
@@ -500,22 +565,35 @@ function changeByName(name){
 	var col3 = document.getElementById('col3');
 	
 	if("col1" == name){
-		col1.setAttribute("src", "images/picture69_2.png");
-		col2.setAttribute("src", "images/picture70_1.png");
-		col3.setAttribute("src", "images/picture71_1.png");
+		col1.setAttribute("src", "/images/picture69_2.png");
+		col2.setAttribute("src", "/images/picture70_1.png");
+		col3.setAttribute("src", "/images/picture71_1.png");
 	}
 	if("col2" == name){			
-		col1.setAttribute("src", "images/picture69_1.png");
-		col2.setAttribute("src", "images/picture70_2.png");
-		col3.setAttribute("src", "images/picture71_1.png");
+		col1.setAttribute("src", "/images/picture69_1.png");
+		col2.setAttribute("src", "/images/picture70_2.png");
+		col3.setAttribute("src", "/images/picture71_1.png");
 		
 	}
 	if("col3" == name){
-		col1.setAttribute("src", "images/picture69_1.png");
-		col2.setAttribute("src", "images/picture70_1.png");
-		col3.setAttribute("src", "images/picture71_2.png");
+		col1.setAttribute("src", "/images/picture69_1.png");
+		col2.setAttribute("src", "/images/picture70_1.png");
+		col3.setAttribute("src", "/images/picture71_2.png");
 	}
 }
+function showCompanyDetail(name){
+	var f = document.createElement("form");
+	document.body.appendChild(f);
+	var i = document.createElement("input");
+	i.type = "hidden";
+	i.name="companyName";
+	i.value=name;
+    f.appendChild(i);
+	f.method="post";
+	f.action="/showcompany";
+	f.submit();
+}
+
 /*
 function getFromOther(other){
 	if('other1' == other){
@@ -537,7 +615,7 @@ function sendContent(other){
 }
 
 function checkReg(){
-	if("images/picture55.png" == document.getElementById("done").getAttribute("src")){
+	if("/images/picture55.png" == document.getElementById("done").getAttribute("src")){
 		return false;
 	}
 	if(document.form1.user.value == ''){
@@ -612,8 +690,8 @@ function checkReg(){
 	}else{
 		var phone =/^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$/;
 		if(!phone.test(document.form1.phone.value)){
-		  document.getElementById('tishi10').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的电话号码</font>";
-		 //  document.form1.phone.focus();
+		  document.getElementById('tishi9').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的电话号码</font>";
+		   //document.form1.phone.focus();
 		   return false;
 		}
 	}
@@ -650,17 +728,20 @@ function checkReg(){
 	}else{
 		var  code =/^[0-9]{6}$/;  
 		if(!code.test(document.form1.code.value)){
-		  document.getElementById('tishi13').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的手机号码</font>";
+		  document.getElementById('tishi13').innerHTML="<font color='#FF0000' >&nbsp;请输入有效的邮政编码</font>";
 		  //document.form1.mobilephone.focus();
 		   return false;
 		}
 	}
+	return true;
 }
 function checkRegAndPost(){
-	if(!(checkReg() && canSubmit)){
+	if(!(checkReg() && window.canSubmit1 && window.canSubmit2)){
 		document.form1.checkDone.checked = false;
-		document.getElementById('done').setAttribute("src", "images/picture55.png");
+		document.getElementById('done').setAttribute("src", "/images/picture55.png");
 	}else{
+	  document.form1.checkDone.checked = true;
+	  document.getElementById('done').setAttribute("src", "/images/picture54.png");
 	  document.getElementById("reg").submit();
 	}
 }
@@ -806,11 +887,11 @@ function checkcontent(content){
 }
 
 function changebg(o){
-	o.style.backgroundImage="url('images/picture138.png')";
+	o.style.backgroundImage="url('/images/picture138.png')";
 	o.childNodes[0].style.color = "#fff";
 }
 function changebgback(o){
-	o.style.backgroundImage="url('images/picture137.png')";
+	o.style.backgroundImage="url('/images/picture137.png')";
 	o.childNodes[0].style.color = "#ccc";
 }
 function activeGo(num){
@@ -819,18 +900,18 @@ function activeGo(num){
 		return false;
 	else{
 		var goimg = document.getElementById("go");
-		goimg.setAttribute("src", "images/picture139.png");
+		goimg.setAttribute("src", "/images/picture139.png");
 		goimg.style.cursor = "pointer";
 	}
 }
 function unactiveGo(){
 	var goimg = document.getElementById("go");
-		goimg.setAttribute("src", "images/picture140.png");
+		goimg.setAttribute("src", "/images/picture140.png");
 		goimg.style.cursor = "auto";
 }
 
 function page_jump(toPage){
-	var url = "companyQuery.php";
+	var url = "/companyQuery.php";
 	xmlHttp = GetXmlHttpObject();
 	xmlHttp.open('POST',url,true); 
     xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
@@ -847,7 +928,7 @@ function page_jump(toPage){
      } 
  } 
 function gotoPage(toPage){
-	var url = "companyQuery.php";
+	var url = "/companyQuery.php";
 	xmlHttp = GetXmlHttpObject();
 	xmlHttp.open('POST',url,true); 
     xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");

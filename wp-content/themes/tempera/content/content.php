@@ -30,15 +30,20 @@ foreach ($options as $key => $value) {
 			?><?php if ( is_archive() || is_search() ) : // Display excerpts for archives and search. ?>
 			
 						<?php if ($tempera_excerptarchive != "Full Post" ){ ?>
-						<div class="entry-summary">
-						<?php //tempera_set_featured_thumb(); ?>
-						<?php the_excerpt(); ?>
+					
+					   <div class="entry-summary">
+					   <div class="featuredimg"><?php tempera_set_featured_thumb(); ?></div>
+					   <div class="excerpt">
+					   <div class="excerpttitle"> <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
+					   <div class="excerptauthor"> <?php the_author(); ?>
+					   <?php echo esc_html( get_the_date() ); ?></div>
+						 <p>
+						  <?php echo mb_strimwidth(strip_tags(apply_filters('the_content', $post->post_content)), 0, 150,"<br/>……"); ?></p>
+						  <div class="excerpt2" style="margin-top:-5px;"><a href="<?php echo get_permalink(); ?>">点击阅读</a></div>
+						  </div>
 						</div><!-- .entry-summary -->
-						<?php } else { ?>
-						<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'tempera' ) . '</span>', 'after' => '</div>' ) ); ?>
-						</div><!-- .entry-content --> 
+					   <div style="height:5px;"></div>
+					
 						<?php }   ?>
 			
 		<?php else : 
@@ -64,5 +69,12 @@ foreach ($options as $key => $value) {
 		</footer>-->
 	</article><!-- #post-<?php the_ID(); ?> -->
 	
-	
+	<script type="text/javascript">
+$(function(){
+var imgpath = $(".featuredimg > a").find("img").attr("src");
+   if(imgpath.indexOf("http://localhost/agriculture_fr") != -1) {
+		imgpath = imgpath.substring(31);
+		$(".featuredimg > a").find("img").attr("src", imgpath);
+   }});
+</script>
 <?php cryout_after_article_hook(); ?>

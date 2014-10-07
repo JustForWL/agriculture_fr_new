@@ -8,19 +8,19 @@
  */
 
 get_header(); ?>
-
+<div id="main">
+<div id="frontpage" >
+<div id="pp-afterslider">
+<div style="padding-left: 10%; padding-top: 5%;">
 		<section id="container" class="<?php echo tempera_get_layout_class(); ?>">
 	
 			<div id="content" role="main">
-			<?php cryout_before_content_hook(); ?>
+			<?php //cryout_before_content_hook(); ?>
 			
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php
-						printf( __( 'Tag Archives: %s', 'tempera' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-					?></h1>
-
+			
 					<?php
 						$tag_description = tag_description();
 						if ( ! empty( $tag_description ) )
@@ -62,5 +62,5 @@ get_header(); ?>
 			</div><!-- #content -->
 	<?php tempera_get_sidebar(); ?>
 		</section><!-- #container -->
-
+</div></div></div></div>
 <?php get_footer(); ?>

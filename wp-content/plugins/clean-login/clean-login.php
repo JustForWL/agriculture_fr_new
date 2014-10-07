@@ -34,7 +34,7 @@ function show_clean_login($atts) {
 	
 	if ( isset( $_GET['authentication'] ) ) {
 		if ( $_GET['authentication'] == 'success' )
-			wp_safe_redirect("/");
+			wp_safe_redirect( parse_url($_SESSION['HTTP_REFERER']));
 		else if ( $_GET['authentication'] == 'failed' )
 			echo "<div class='cleanlogin-notification error' id='notification'><p>". __( '用户名或密码错误', 'cleanlogin' ) ."</p></div>";
 		else if ( $_GET['authentication'] == 'logout' )
@@ -441,7 +441,7 @@ add_action( 'init', 'block_dashboard_access' );
 
 function register_session(){
     if( !session_id() )
-        session_start();
+        @session_start();
 }
 add_action('init','register_session');
 

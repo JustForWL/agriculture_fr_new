@@ -31,22 +31,22 @@ $tempera_defaults = array(
 "tempera_slideNumber"	=> "5",
 "tempera_slideSpecific"	=> "",
 
-"tempera_sliderimg1"	=> get_template_directory_uri()."/images/slider/tempera-slide1.jpg",
+"tempera_sliderimg1"	=> "/wp-content/themes/tempera/images/slider/tempera-slide1.jpg",
 "tempera_slidertitle1"	=> "Jump right in!",
 "tempera_slidertext1"	=> "It's like plunging into the calm ocean, the wind softly caressing your tanned body, the sun warming and igniting it. It's like feeling the ocean cool and
 						embrace and contain you like a primordial womb. It's also like waking up from this dream and getting back to your blog!",
 "tempera_sliderlink1"	=> "",
-"tempera_sliderimg2"	=> get_template_directory_uri()."/images/slider/tempera-slide2.jpg",
+"tempera_sliderimg2"	=> "/wp-content/themes/tempera/images/slider/tempera-slide2.jpg",
 "tempera_slidertitle2"	=> "Tempera brings the mountain to you",
 "tempera_slidertext2"	=> "Remember that mountain you've always wanted to climb? Tempera will not only get it to come to you but it will also provide hiking equipment and if needed 
 						will actually climb the mountain for you.",
 "tempera_sliderlink2"	=> "",
-"tempera_sliderimg3"	=> get_template_directory_uri()."/images/slider/tempera-slide3.jpg",
+"tempera_sliderimg3"	=> "/wp-content/themes/tempera/images/slider/tempera-slide3.jpg",
 "tempera_slidertitle3"	=> "Using Tempera is a walk in the park",
 "tempera_slidertext3"	=> "Using Tempera is really just a walk in the park. If in that park you'll meet a baby, using Tempera will become as easy as taking candy from that baby.
 						If there's a picnic going on and there's cake, you can consider yourself invited and things will become a piece of cake.",
 "tempera_sliderlink3"	=> "",
-"tempera_sliderimg4"	=>  get_template_directory_uri()."/images/slider/tempera-slide4.jpg",
+"tempera_sliderimg4"	=> "/wp-content/themes/tempera/images/slider/tempera-slide4.jpg",
 "tempera_slidertitle4"	=> "Tempera lives up to your expectations",
 "tempera_slidertext4"	=> "Especially if your expectations are fluffy clouds. In that case it may even surpass your expectations; then your expectations will start having 
 						expectations of their own which of course Tempera will be able to fulfil as well.",

@@ -4,7 +4,7 @@
 <div style="padding-left:10%;padding-top:5%;">
 <div class="lianxi1">
 	<img src="/images/picture32.png">
-        <form id="reg" method="post" action="regSuccess" name="form1">
+        <form id="reg" method="post" action="/regsucc" name="form1">
              
           <div class="b7">
                 <div class="b5" align="left"><img src="/images/picture131.png"><input type="text" size="30" name="user"  style="margin-left:60px;"/><span id="tishi1" style="font-size:12px;"></span></div>
@@ -125,7 +125,7 @@
     </div>
     
     
- <div class="buchong1"><img src="/images/picture34.png"></div>
+<div class="buchong1"><img src="/images/picture34.png"></div>
 </div>
  
 </div>
