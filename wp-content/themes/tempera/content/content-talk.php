@@ -33,6 +33,14 @@ $post_list = new WP_Query(
 $total_posts = $post_list->found_posts;
 
 ?>
+<script type="text/javascript">
+$(function(){
+var imgpath = $(".featuredimg > a").find("img").attr("src");
+   if(imgpath.indexOf("http://localhost/agriculture_fr") != -1) {
+		imgpath = imgpath.substring(31);
+		$(".featuredimg > a").find("img").attr("src", imgpath);
+   }});
+</script>
 <div id="main">
 <div id="frontpage" >
 <div id="pp-afterslider">
@@ -47,7 +55,7 @@ $total_posts = $post_list->found_posts;
            <div class="entry-summary">
 		    <div class="featuredimg"><?php tempera_set_featured_thumb(); ?></div>
 			<div class="excerpt">
-		    <div class="excerpttitle"> <?php the_title(); ?></div>
+		    <div class="excerpttitle"> <a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></div>
 			<div class="excerptauthor"> <?php the_author(); ?>
 			  <?php echo esc_html( get_the_date() ); ?></div>
 			 <p>

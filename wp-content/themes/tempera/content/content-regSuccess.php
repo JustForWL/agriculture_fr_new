@@ -79,9 +79,9 @@ if(!empty($_POST['canSubmit'])){
          <div id="pp-afterslider">
          <div class="b2">
             <div style="height:200px;"></div>
-            <div style="margin-left:10%;"><img src="images/picture136.png" /></div>
+            <div style="margin-left:10%;"><img src="/images/picture136.png" /></div>
            
-            <div style="margin-top:-30%;float:left;margin-left:48%;"></span><img src="images/picture135.png" /></div>
+            <div style="margin-top:-30%;float:left;margin-left:48%;"></span><img src="/images/picture135.png" /></div>
             <div style="margin-top:-20%;float:left;margin-left:48%;"><img src="/images/picture134.png" /></div>
             <div style="margin-top:-10%;float:left;;margin-left:48%;">
 	        <ul style="list-style:none;height:85px;">

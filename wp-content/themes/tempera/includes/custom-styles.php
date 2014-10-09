@@ -34,6 +34,7 @@ $colPadding = 30;
 $contentSize = $contentSize - 60;
 
 ?>
+.companyName {border: 0;color: rgb(209,0,35);font-family: Arial;font-size: 18px;font-weight: bold;margin-bottom: 5px;text-transform: none;}
 .news2 {display:inline;margin-left:60%;float:left;margin-top:-30px;}
 .talk {display:inline;float:left;margin-left:65%;margin-top:-30px;}
 .shijian {display:inline;float:left;margin-left:70%;margin-top:-30px;}
@@ -45,113 +46,64 @@ $contentSize = $contentSize - 60;
 
 #done2 {cursor:pointer;}
 .login { background-color:#FFF;max-width:1000px;margin-left:15%;margin-top:-8px;}
-.selectedone {background:url('images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
-.unselectedone {background:url('images/picture137.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
+.selectedone {background:url('/images/picture138.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
+.unselectedone {background:url('/images/picture137.png') no-repeat; width:38px;height:34px;padding-top:6px;padding-right:0px;display:inline-block;}
 .cur{cursor:pointer; display:block;color:#788F72;width:270px; height:22px; line-height:22px; padding:0px 0px 0px 2px;}
 .am{border-color:#D10024;border: 0px;color:#ccc;cursor: pointer; width: 150px;height: 19px;margin:10px 0px 0px 10px; padding:3px 0px 0px 2px;}
-.bm{background-color:#ccc;width:270px; margin-left:50px;position:absolute; z-index:100;margin-top:2px;}
+.bm{background-color:#ccc;width:270px; margin-left:50px;position:absolute; z-index:100;margin-top:2px;height:200px;overflow:auto;}
 .bm2{background-color:#ccc;width: 255px; margin-left:55px;position:absolute; z-index:100;margin-top:2px;}
 ul li{ float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden}
-#row_1:hover{ color:#F00}
-#row_2:hover{ color:#F00}
-#row_3:hover{ color:#F00}
-#row_4:hover{ color:#F00}
-#row_5:hover{ color:#F00}
-#row_6:hover{ color:#F00}
-#row_7:hover{ color:#F00}
-#row_8:hover{ color:#F00}
-#row_9:hover{ color:#F00}
-#row_10:hover{ color:#F00}
-#row_11:hover{ color:#F00}
-#row_12:hover{ color:#F00}
-#row_13:hover{ color:#F00}
-#row_14:hover{ color:#F00}
-#row_15:hover{ color:#F00}
-#row_16 :hover {color:#f00}
-#row_17 :hover {color:#f00}
-#row_18 :hover {color:#f00}
-#row_19 :hover {color:#f00}
-#row_20 :hover {color:#f00}
-#row_21 :hover {color:#f00}
-#row_22 :hover {color:#f00}
-#row_23 :hover {color:#f00}
-#row_24 :hover {color:#f00}
-#row_25 :hover {color:#f00}
-#row_26 :hover {color:#f00}
-#row_27 :hover {color:#f00}
-#row_28 :hover {color:#f00}
-#row_29 :hover {color:#f00}
-#row_30 :hover {color:#f00}
-#row_31 :hover {color:#f00}
-#row_32 :hover {color:#f00}
-#row_33 :hover {color:#f00}
-#row_34 :hover {color:#f00}
-#row_35 :hover {color:#f00}
-#row_36 :hover {color:#f00}
-#row_37 :hover {color:#f00}
-#row_38 :hover {color:#f00}
-#row_39 :hover {color:#f00}
-#row_40 :hover {color:#f00}
-#row_41 :hover {color:#f00}
-#row_42 :hover {color:#f00}
-#row_43 :hover {color:#f00}
-#row_44 :hover {color:#f00}
-#row_45 :hover {color:#f00}
-#row_46 :hover {color:#f00}
-#row_47 :hover {color:#f00}
-#row_48 :hover {color:#f00}
-#row_49 :hover {color:#f00}
-#row_50 :hover {color:#f00}
-#row_51 :hover {color:#f00}
-#row_52 :hover {color:#f00}
-#row_53 :hover {color:#f00}
-#row_54 :hover {color:#f00}
-#row_55 :hover {color:#f00}
-#row_56 :hover {color:#f00}
-#row_57 :hover {color:#f00}
-#row_58 :hover {color:#f00}
-#row_59 :hover {color:#f00}
-#row_60 :hover {color:#f00}
-#row_61 :hover {color:#f00}
-#row_62 :hover {color:#f00}
-#row_63 :hover {color:#f00}
-#row_64 :hover {color:#f00}
-#row_65 :hover {color:#f00}
-#row_66 :hover {color:#f00}
-#row_67 :hover {color:#f00}
-#row_68 :hover {color:#f00}
-#row_69 :hover {color:#f00}
-#row_70 :hover {color:#f00}
-#row_71 :hover {color:#f00}
-#row_72 :hover {color:#f00}
-#row_73 :hover {color:#f00}
-#row_74 :hover {color:#f00}
-#row_75 :hover {color:#f00}
-#row_76 :hover {color:#f00}
-#row_77 :hover {color:#f00}
-#row_78 :hover {color:#f00}
-#row_79 :hover {color:#f00}
-#row_80 :hover {color:#f00}
-#row_81 :hover {color:#f00}
-#row_82 :hover {color:#f00}
-#row_83 :hover {color:#f00}
-#row_84 :hover {color:#f00}
-#row_85 :hover {color:#f00}
-#row_86 :hover {color:#f00}
-#row_87 :hover {color:#f00}
-#row_88 :hover {color:#f00}
-#row_89 :hover {color:#f00}
-#row_90 :hover {color:#f00}
-#row_91 :hover {color:#f00}
-#row_92 :hover {color:#f00}
-#row_93 :hover {color:#f00}
-#row_94 :hover {color:#f00}
-#row_95 :hover {color:#f00}
-#row_96 :hover {color:#f00}
-#row_97 :hover {color:#f00}
-#row_98 :hover {color:#f00}
-#row_99 :hover {color:#f00}
-#row_100 :hover {color:#f00}
+#show_ajax {height:auto}
+#row_1:hover{ color:#F00;cursor:pointer}
+#row_2:hover{ color:#F00;cursor:pointer}
+#row_3:hover{ color:#F00;cursor:pointer}
+#row_4:hover{ color:#F00;cursor:pointer}
+#row_5:hover{ color:#F00;cursor:pointer}
+#row_6:hover{ color:#F00;cursor:pointer}
+#row_7:hover{ color:#F00;cursor:pointer}
+#row_8:hover{ color:#F00;cursor:pointer}
+#row_9:hover{ color:#F00;cursor:pointer}
+#row_10:hover{ color:#F00;cursor:pointer}
+#row_11:hover{ color:#F00;cursor:pointer}
+#row_12:hover{ color:#F00;cursor:pointer}
+#row_13:hover{ color:#F00;cursor:pointer}
+#row_14:hover{ color:#F00;cursor:pointer}
+#row_15:hover{ color:#F00;cursor:pointer}
+#row_16:hover {color:#F00;cursor:pointer}
+#row_17:hover {color:#F00;cursor:pointer}
+#row_18:hover {color:#F00;cursor:pointer}
+#row_19:hover {color:#F00;cursor:pointer}
+#row_20:hover {color:#F00;cursor:pointer}
+#row_21:hover {color:#F00;cursor:pointer}
+#row_22:hover {color:#F00;cursor:pointer}
+#row_23:hover {color:#F00;cursor:pointer}
+#row_24:hover {color:#F00;cursor:pointer}
+#row_25:hover {color:#F00;cursor:pointer}
+#row_26:hover {color:#F00;cursor:pointer}
+#row_27:hover {color:#F00;cursor:pointer}
+#row_28:hover {color:#F00;cursor:pointer}
+#row_29:hover {color:#F00;cursor:pointer}
+#row_30:hover {color:#F00;cursor:pointer}
+#row_31:hover {color:#F00;cursor:pointer}
+#row_32:hover {color:#F00;cursor:pointer}
+#row_33:hover {color:#F00;cursor:pointer}
+#row_34:hover {color:#F00;cursor:pointer}
+#row_35:hover {color:#F00;cursor:pointer}
+#row_36:hover {color:#F00;cursor:pointer}
+#row_37:hover {color:#F00;cursor:pointer}
+#row_38:hover {color:#F00;cursor:pointer}
+#row_39:hover {color:#F00;cursor:pointer}
+#row_40:hover {color:#F00;cursor:pointer}
+#row_41:hover {color:#F00;cursor:pointer}
+#row_42:hover {color:#F00;cursor:pointer}
+#row_43:hover {color:#F00;cursor:pointer}
+#row_44:hover {color:#F00;cursor:pointer}
+#row_45:hover {color:#F00;cursor:pointer}
+#row_46:hover {color:#F00;cursor:pointer}
+#row_47:hover {color:#F00;cursor:pointer}
+#row_48:hover {color:#F00;cursor:pointer}
+#row_49:hover {color:#F00;cursor:pointer}
+#row_50:hover {color:#F00;cursor:pointer}
 
 .li_col1{width:20%; height:28px}
 .li_col2{width:25%; height:28px}
@@ -159,10 +111,10 @@ ul li{ float:left; white-space:nowrap ; text-overflow:ellipsis; -o-text-overflow
 .page_img{
 background:url(images/page_img0.png) top center no-repeat; width:40px; display:inline-block; text-align:center; cursor:pointer;}
 .page_img_sel{
-	background:url(images/page_img0.png) top center no-repeat; background-color:#F00; width:40px; display:inline-block; text-align:center;
+	background:url(images/page_img0.png) top center no-repeat; background-color:#F00;cursor:pointer; width:40px; display:inline-block; text-align:center;
 	}
-#wrapper {background:url(http://localhost/agriculture_fr/images/bg.jpg) repeat-y;  }
-.row_type :hover {color:#F00;}
+#wrapper {background:url('/images/bg.jpg') repeat-y;  }
+.row_type :hover {color:#F00;cursor:pointer;}
 #done :hover {cursor:pointer;}
 .lianxi1 {}
 .buchong1 {float:left;margin-left:580px; margin-top:-1600px;}
@@ -183,7 +135,7 @@ BORDER-BOTTOM-STYLE: dashed; BORDER-LEFT-STYLE:dashed; BORDER-RIGHT-STYLE: dashe
 .col{margin-left:2%;}
 .col1 {width:40%;}
 #frontpage {margin-top:-18px; margin-left:90px;margin-right:30px; background-color:#FFFFFF;}
-body { max-width:1366px;}
+body { margin:0 auto; max-width:1366px;}
 .b1 {margin-left:-12%;}
 .b2 {margin-left:-5%;margin-top:10px;}
 .b11 {display:inline;margin-left:10px;}
@@ -196,22 +148,22 @@ body { max-width:1366px;}
 .rollBox .RightBotton2{height:30px;width:22px;background:url(images/picture15_1.png); no-repeat 0px 0;overflow:hidden;float:left;display:inline;margin-left:1140px;cursor:pointer;margin-top:-130px;}
 .rollBox .Cont{width:auto;overflow:hidden;height:200px;margin-left:22px;margin-top:0;}
 .rollBox .ScrCont{width:10000000px;}
-.rollBox .Cont .pic{width:270px;height:200px;overflow:hidden;float:left;}
+.rollBox .Cont .pic{width:205px;height:200px;overflow:hidden;float:left;}
 .rollBox .Cont .pic img{background:#fff;display:block;}
 .rollBox #List1, .rollBox #List2{float:left;}
 .divcss5{
 	position:relative;
 	margin:0 auto;
 }
-.divcss5 a,.divcss5 a img{display:none; text-decoration:none}
+.divcss5 a,.divcss5 a p{display:none; text-decoration:none}
 .divcss5:hover{cursor:pointer}
 .divcss5:hover a.now{cursor:pointer; position:absolute; top:0; width:100%; height:100%; z-index:100; left:0; display:block;}
-.divcss5:hover a img{ display:block;position:absolute; bottom:0; left:0;color:#FFF;width:554px; z-index:10;height:36px; line-height:36px; background:#efefee;filter:alpha(opacity=90);-moz-opacity:0.9;opacity: 0.9;}
+.divcss5:hover a p{ display:block;position:absolute; bottom:0;height:85%; top:0px;left:0;color:#FFF; z-index:10;background-color:rgba(0,0,0,0.7);}
 #focus ul li {list-style:none;}
-#focus{height:340px;overflow:hidden;position:relative;width:1350px;margin-top:-5px; }
-#focus ul{height:340px;position:absolute;width:1350px;}
-#focus ul li{float:left;height:340px;width:1350px;overflow:hidden;position:relative;background:#000;}
-#focus ul li div{position:absolute;overflow:hidden;}
+#focus{height:340px;overflow:hidden;position:relative;}
+#focus ul{height:340px;position:absolute;}
+#focus ul li{float:left;height:340px;width:auto;overflow:hidden;position:relative;background:#000;}
+#focus ul li div{position:absolute;overflow:hidden;width:auto;}
 #focus .btnBg{position:absolute;height:20px;left:0;bottom:0;background:#000;}
 #focus .btn{position:absolute;height:10px;padding:5px 10px;right:0;bottom:0;text-align:right;}
 #focus .btn span{display:inline-block;_display:inline;_zoom:1;width:25px;height:10px;_font-size:0;margin-left:5px;cursor:pointer;background:#fff;}
@@ -287,7 +239,7 @@ body { font-family: <?php echo ((!$tempera_googlefont)?$tempera_fontfamily:"\"$t
 		font-family: <?php echo ((!$tempera_sitetitlegooglefont)?(($tempera_sitetitlefont == 'General Font')?'inherit':$tempera_sitetitlefont):"\"$tempera_sitetitlegooglefont\"");  ?>; }
 #access ul li a, #access ul li a span {
 		font-family: <?php echo ((!$tempera_menugooglefont)?(($tempera_menufont == 'General Font')?'inherit':$tempera_menufont):"\"$tempera_menugooglefont\"");  ?>; }
-#access { height:60px; background:url(http://localhost/agriculture_fr/images/title_bon_appetit.png) no-repeat;}
+#access { height:60px; background:url(/images/title_bon_appetit.png) no-repeat;}
 #header-full {width:100%; background-color:#EAEAEA }
 .menu {margin-left:60%;}
 <?php
@@ -303,7 +255,7 @@ body { font-family: <?php echo ((!$tempera_googlefont)?$tempera_fontfamily:"\"$t
 .leftimg {margin-left:10%;}
 .topimg {float:left;margin-left:50%;margin-top:-35%;}
 #footer {}
-body { color: <?php echo $tempera_contentcolortxt; ?>; background-color: #000; }
+body { color: <?php echo $tempera_contentcolortxt; ?>; background-color: #e6e6e6; }
 a { color: <?php echo $tempera_linkcolortext; ?>; }
 a:hover,.entry-meta span a:hover, .comments-link a:hover { color: <?php echo $tempera_linkcolorhover; ?>; }
 #header { background-color: <?php echo $tempera_backcolorheader; ?>; }
@@ -322,7 +274,7 @@ box-shadow: 1px 0 0 <?php echo cryout_hexadder($tempera_menucolorbgdefault,'24')
 #access a:hover {background-color: <?php echo cryout_hexadder($tempera_menucolorbgdefault,'13');?>; }
 #access ul li.current_page_item > a, #access ul li.current-menu-item > a,
 #access ul li.current_page_ancestor > a, #access ul li.current-menu-ancestor > a {
-       background: url(http://localhost/agriculture_fr/images/picture109.png) repeat-x; color:#FFF;
+       background: url(/images/picture109.png) repeat-x; color:#FFF;
  }
 /* Main menu Submenus */
 #access > .menu > ul > li > ul:before {border-bottom-color:<?php echo $tempera_submenucolorbgdefault; ?>;}
@@ -370,7 +322,7 @@ else { ?>
 .entry-title a:hover { color: <?php echo $tempera_contentcolortxttitlehover; ?>; }
 #content h3.entry-format { color: <?php echo $tempera_menucolortxtdefault; ?>; background-color: <?php echo $tempera_menucolorbgdefault; ?>; }
 
-#footer { color: #FFF; background-color: <?php echo $tempera_backcolorfooterw; ?>; }
+#footer { color: #FFF; background-color: #000; }
 #footer2 { color: <?php echo $tempera_footercolortxt; ?>; background-color: <?php echo $tempera_backcolorfooter; ?>;  }
 #footer a { color: #CCC; }
 #footer a:hover { color: <?php echo $tempera_linkcolorwooterhover; ?>; }

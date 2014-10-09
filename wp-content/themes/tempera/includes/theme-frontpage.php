@@ -52,7 +52,7 @@ function tempera_presentation_css() {
 .column-image {	max-width:<?php echo $tempera_colimagewidth;?>px;margin:0 auto;}
 .column-image img {	max-width:<?php echo $tempera_colimagewidth;?>px;  max-height:<?php echo $tempera_colimageheight;?>px;}
 
-.nivo-caption { background-color: rgba(<?php echo cryout_hex2rgb($tempera_fpslidercaptionbg); ?>,0.7); }
+.nivo-caption { /*background-color: #rgba(<?php echo cryout_hex2rgb($tempera_fpslidercaptionbg); ?>,0.7);*/}
 .nivo-caption, .nivo-caption a { color: <?php echo $tempera_fpslidercaptioncolor; ?>; }
 .theme-default .nivo-controlNav, .theme-default .nivo-directionNav a { background-color:<?php echo $tempera_fpsliderbordercolor; ?>; }
 .slider-bullets .nivo-controlNav a { background-color: <?php echo $tempera_sidetitlebg; ?>; }

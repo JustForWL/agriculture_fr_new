@@ -26,13 +26,14 @@ get_header();?>
 
 					<div class="entry-content">
 						<?php 
-						if(in_category(array('news','talk','event'))){
+						if(in_category(array('special'))){
 							if(is_user_logged_in()){
 								the_content();
 							}else{
-							echo "请登录后阅读全文";
+							echo "请<a href=\"/login\">登录</a>后阅读全文";
 							}
-						}else{
+						}
+						if(in_category(array('news','talk','event'))){
 						the_content(); 
 						}
 						?>

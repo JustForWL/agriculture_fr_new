@@ -15,12 +15,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=<?php bloginfo( 'charset' ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-
-
 <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
-
-<script type="text/javascript" src="/js/menu.js"></script>
+<script type="text/javascript" src="/js/menu.JS"></script>
 <script type="text/javascript" src="/js/customs.js"></script>
+
 <?php
  	cryout_header_hook();
 	wp_head(); ?>
@@ -34,7 +32,7 @@
 <div align="center" valign="middle" class="selectLanguage2"  onmouseover="showmenu(event, other)" onmouseout="delayhidemenu()"><img src="/images/picture22.png" /><font color="#7F7F7F">中文</font></div>
 <div class="menuskin" id="popmenu" onmouseover="clearhidemenu();highlightmenu(enent, 'on')" onmouseout="highlightmenu(event, 'off');dynamichide(event)">
 </div>
-<div style="display:inline; margin-left:20%;"><?php if(!is_user_logged_in()) { ?><a href="/register" style="color:#7F7F7F;">免费注册</a><font color="#7F7F7F">/</font><a style="color:#7F7F7F;" href="/login">登录</a><?php }else{ global $current_user; echo "欢迎您：".$current_user->user_login."&nbsp;&nbsp;<a href=\"/showmembers\">修改资料</a>"."&nbsp;&nbsp;<a href=\"/login\">注销</a>" ;} ?></div>
+<div style="display:inline; margin-left:20%;"><?php if(!is_user_logged_in()) { ?><a href="/register" style="color:#7F7F7F;">免费注册</a><font color="#7F7F7F">/</font><a style="color:#7F7F7F;" href="/login">登录</a><?php }else{ global $current_user; echo "欢迎您：".$current_user->user_login."&nbsp;&nbsp;<a href=\"/showmembers\">修改资料</a>"."&nbsp;&nbsp;<a href=\"".wp_logout_url(home_url()). "\">注销</a>" ;} ?></div>
 <div class="headersearch" ><?php get_search_form(); ?></div><?php cryout_topbar_hook(); ?> <!--<span style="margin-left:88%;float:left;margin-top:-30px;color:#CCC;"><?php if(function_exists('the_views')){the_views('次浏览',true);}?></span>-->
 </div>
 <?php cryout_wrapper_hook(); ?>

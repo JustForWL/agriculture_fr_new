@@ -14,7 +14,7 @@
         <div class="b3">
                            <img src="/images/discover/5-fdp.jpg" alt="" width="220" height="450" usemap="#Map16"/>&nbsp;&nbsp;&nbsp;&nbsp;
                               <map name="Map16">
-                                <area shape="rect" coords="60,398,160,424" href="/pdf/半成品和方便食品.pdf">
+                                <area shape="rect" coords="60,398,160,424" href="/pdf/法国半成品和方便食品.pdf">
                             </map>
                             <img src="/images/discover/6-fcp.jpg" alt="" width="220" height="450" usemap="#Map15"/>&nbsp;&nbsp;&nbsp;&nbsp;
                            <img src="/images/discover/7_fdp.jpg" alt="" width="221" height="450" usemap="#Map17"/>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -23,7 +23,7 @@
           <div  class="b3">
                          <img src="/images/discover/9_fmm.jpg" alt="" width="220" height="450" usemap="#Map19"/>&nbsp;&nbsp;&nbsp;&nbsp;
                               <map name="Map19">
-                                <area shape="rect" coords="59,396,161,424" href="/pdf/肉制品.pdf">
+                                <area shape="rect" coords="59,396,161,424" href="/pdf/法国肉世界.pdf">
                             </map>
                             <img src="/images/discover/10-fs.jpg" alt="" width="220" height="450" usemap="#Map20"/>
                     
@@ -31,34 +31,34 @@
   </div>
   
 <map name="Map12">
-  <area shape="rect" coords="61,397,164,424" href="/pdf/精致香料.pdf">
+  <area shape="rect" coords="61,397,164,424" href="/pdf/法国精制美食.pdf">
 </map>
 
 
 <map name="Map14">
-  <area shape="rect" coords="62,397,162,424" href="/pdf/甜点.pdf">
+  <area shape="rect" coords="62,397,162,424" href="/pdf/法国的甜点.pdf">
 </map>
 
 <map name="Map15">
-  <area shape="rect" coords="62,398,164,424" href="/pdf/谷物制品.pdf">
+  <area shape="rect" coords="62,398,164,424" href="/pdf/法国谷物产品.pdf">
 </map>
 <map name="Map17">
-  <area shape="rect" coords="61,398,162,424" href="/pdf/奶制品.pdf">
+  <area shape="rect" coords="61,398,162,424" href="/pdf/法国奶制品.pdf">
 </map>
 
 <map name="Map18">
-  <area shape="rect" coords="62,397,162,424" href="/pdf/葡萄酒、啤酒及烈酒.pdf">
+  <area shape="rect" coords="62,397,162,424" href="/pdf/法国葡萄酒、啤酒与烈酒.pdf">
 </map>
 <map name="Map20">
-  <area shape="rect" coords="60,396,160,424" href="/pdf/海产品.pdf">
+  <area shape="rect" coords="60,396,160,424" href="/pdf/法国海产品.pdf">
 </map>
 
 <map name="Map11">
-  <area shape="rect" coords="65,399,164,425" href="/pdf/软饮料.pdf">
+  <area shape="rect" coords="65,399,164,425" href="/pdf/法国软饮料.pdf">
 </map>
 
 <map name="Map13">
-  <area shape="rect" coords="61,397,162,424" href="/pdf/水果和蔬菜.pdf">
+  <area shape="rect" coords="61,397,162,424" href="/pdf/法国的水果和蔬菜.pdf">
 </map>
 </div> <!-- #pp-afterslider -->
 </div> <!-- #frontpage -->

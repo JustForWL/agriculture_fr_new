@@ -4,7 +4,7 @@ $target = $_POST['target'];
 //echo $target;
 //$target = $_GET["target"];
 
-if("'products'" == $target){
+if("products" == $target){
     $proTypes = array();
 	$sql = 'select distinct products from companies';
 	$result = mysql_query($sql);
@@ -28,8 +28,9 @@ if("'products'" == $target){
 		$a = $a + 1;
 	}
 	echo implode($proTypes);
+	
 }
-if("'country'" == $target){
+if("country" == $target){
 	$country = array();
 	$sql = 'select distinct country from companies';
 	$result = mysql_query($sql);

@@ -8,10 +8,13 @@
  */
 
 get_header(); ?>
-
+<div id="main">
+<div id="frontpage" >
+<div id="pp-afterslider">
+<div style="padding-left: 10%; padding-top: 5%;">
 		<section id="container" class="<?php echo tempera_get_layout_class(); ?>">
 			<div id="content" role="main">
-			<?php cryout_before_content_hook(); ?>
+			<?php //cryout_before_content_hook(); ?>
 			
 			<?php if ( have_posts() ) : ?>
 			
@@ -25,9 +28,7 @@ get_header(); ?>
 					the_post();
 				?>
 
-				<header class="page-header">
-					<h1 class="page-title author"><?php printf( __( 'Author Archives: %s', 'tempera' ), '<span class="vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( "ID" ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' ); ?></h1>
-				</header>
+			
 
 				<?php
 					/* Since we called the_post() above, we need to
@@ -84,5 +85,8 @@ get_header(); ?>
 		<?php tempera_get_sidebar(); ?>
 		</section><!-- #primary -->
 
-
+</div>
+</div>
+</div>
+</div>
 <?php get_footer(); ?>

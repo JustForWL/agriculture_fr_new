@@ -15,7 +15,7 @@ get_header();
 if ($tempera_frontpage=="Enable" && is_front_page()): get_template_part( 'frontpage' );
 else :
 ?>
-		<section id="container" class="<?php echo tempera_get_layout_class(); ?>">
+		<section id="container" class="<?php echo tempera_get_layout_class(); ?> ">
 
 			<div id="content" role="main">
 			<?php //cryout_before_content_hook(); ?>
